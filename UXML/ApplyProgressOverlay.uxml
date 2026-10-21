@@ -1,0 +1,15 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <engine:VisualElement name="ApplyProgressOverlay" class="apply-overlay">
+        <engine:VisualElement class="apply-overlay__card">
+            <engine:Label name="ProgressLabel" class="apply-overlay__progress" />
+            <engine:ProgressBar name="ProgressBar" class="apply-overlay__progress-bar" />
+            <engine:Label name="CountLabel" class="apply-overlay__counts" />
+            <engine:VisualElement name="NoticeView" class="apply-overlay__notices" />
+            <engine:ScrollView name="ItemView" horizontal-scroller-visibility="Hidden" class="apply-overlay__items" />
+            <engine:VisualElement class="apply-overlay__footer">
+                <engine:Button name="StopButton" />
+                <engine:Button name="CloseButton" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

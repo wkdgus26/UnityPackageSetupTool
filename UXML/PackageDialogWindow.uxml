@@ -1,0 +1,13 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="../Style/package-setup-tool.uss" />
+    <engine:VisualElement name="DialogRoot" class="apply-dialog">
+        <engine:Label name="DescriptionLabel" class="apply-dialog__description" />
+        <engine:VisualElement name="NoticeContainer" class="apply-dialog__notices" />
+        <engine:VisualElement name="ToolbarContainer" class="apply-dialog__toolbar" />
+        <engine:ScrollView name="SectionView" horizontal-scroller-visibility="Hidden" class="apply-dialog__sections" />
+        <engine:VisualElement name="Footer" class="apply-dialog__footer">
+            <engine:Label name="SummaryLabel" class="apply-dialog__summary" />
+            <engine:Button name="ConfirmButton" class="apply-dialog__button" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

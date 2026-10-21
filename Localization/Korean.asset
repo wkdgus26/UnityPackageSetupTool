@@ -1,0 +1,563 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73455d3dab2e7974599997d0161b42ac, type: 3}
+  m_Name: Korean
+  m_EditorClassIdentifier: PackageSetupTool.Editor::PackageSetupTool.LanguageData
+  language: 23
+  displayName: "\uD55C\uAD6D\uC5B4"
+  entries:
+  - key: ui.apply
+    text: "\uD504\uB9AC\uC14B \uC801\uC6A9"
+  - key: ui.cancel
+    text: "\uC911\uB2E8"
+  - key: ui.delete
+    text: "\uC0AD\uC81C"
+  - key: ui.language.tooltip
+    text: "\uB3C4\uAD6C \uC5B8\uC5B4"
+  - key: ui.newPreset.tooltip
+    text: "\uC0C8 \uD504\uB9AC\uC14B"
+  - key: ui.gitUrl.placeholder
+    text: "https://github.com/\u2026/\u2026git \uB610\uB294 git+file:///\u2026"
+  - key: ui.gitUrl.add
+    text: "\uCD94\uAC00"
+  - key: ui.package.notInCatalog
+    text: "{0} (\uBAA9\uB85D\uC5D0 \uC5C6\uC74C)"
+  - key: ui.details.packageManager.tooltip
+    text: "Package Manager\uC5D0\uC11C \uC0C1\uC138 \uBCF4\uAE30"
+  - key: ui.details.git.tooltip
+    text: "\uBE0C\uB77C\uC6B0\uC800\uC5D0\uC11C \uC800\uC7A5\uC18C \uC5F4\uAE30"
+  - key: ui.section.selected
+    text: "\uC120\uD0DD\uB428 {0}"
+  - key: ui.section.unselected
+    text: "\uC120\uD0DD \uC548 \uB428 {0}"
+  - key: ui.empty.noSearchMatch
+    text: "\uAC80\uC0C9\uC5B4\uC640 \uC77C\uCE58\uD558\uB294 \uD56D\uBAA9\uC774 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: ui.empty.git
+    text: "\uD56D\uBAA9\uC774 \uC5C6\uC2B5\uB2C8\uB2E4. \uC704 \uC785\uB825\uB780\uC5D0 git URL\uC744 \uCD94\uAC00\uD558\uAC70\uB098 \uBAA9\uB85D \uAC31\uC2E0 \uBC84\uD2BC\uC744 \uB204\uB974\uC138\uC694."
+  - key: ui.empty.default
+    text: "\uD56D\uBAA9\uC774 \uC5C6\uC2B5\uB2C8\uB2E4. \uBAA9\uB85D \uAC31\uC2E0 \uBC84\uD2BC\uC744 \uB204\uB974\uC138\uC694."
+  - key: menu.rename
+    text: "\uC774\uB984 \uBCC0\uACBD"
+  - key: menu.delete
+    text: "\uC0AD\uC81C..."
+  - key: dialog.cancel
+    text: "\uCDE8\uC18C"
+  - key: dialog.deletePreset.title
+    text: "\uD504\uB9AC\uC14B \uC0AD\uC81C"
+  - key: dialog.deletePreset.message
+    text: "'{0}' \uD504\uB9AC\uC14B\uC744 \uC0AD\uC81C\uD560\uAE4C\uC694?\n(\uD734\uC9C0\uD1B5\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4)"
+  - key: dialog.deletePreset.ok
+    text: "\uC0AD\uC81C"
+  - key: dialog.applyPreset.title
+    text: "\uD504\uB9AC\uC14B \uC801\uC6A9"
+  - key: dialog.applyPreset.message
+    text: "'{0}' \uD504\uB9AC\uC14B\uC758 \uD328\uD0A4\uC9C0 {1}\uAC1C\uB97C \uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0 \uC801\uC6A9\uD569\uB2C8\uB2E4. \uC9C4\uD589 \uC911 \uC2A4\uD06C\uB9BD\uD2B8\uAC00 \uB2E4\uC2DC \uCEF4\uD30C\uC77C\uB418\uC5B4\uB3C4 \uC774\uC5B4\uC11C \uC9C4\uD589\uD569\uB2C8\uB2E4."
+  - key: dialog.applyPreset.ok
+    text: "\uC801\uC6A9"
+  - key: message.playModeUnavailable
+    text: "Play Mode\uC5D0\uC11C\uB294 \uBAA9\uB85D \uAC31\uC2E0, \uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D, \uD504\uB9AC\uC14B \uC801\uC6A9\uC744 \uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: message.presetCreated
+    text: "\uD504\uB9AC\uC14B '{0}'\uC744 \uB9CC\uB4E4\uC5C8\uC2B5\uB2C8\uB2E4."
+  - key: message.presetRenameFailed
+    text: "\uD504\uB9AC\uC14B \uC774\uB984 \uBCC0\uACBD \uC2E4\uD328: {0}"
+  - key: message.presetRenamed
+    text: "\uD504\uB9AC\uC14B \uC774\uB984\uC744 '{0}'\uC5D0\uC11C '{1}'(\uC73C)\uB85C \uBC14\uAFE8\uC2B5\uB2C8\uB2E4."
+  - key: message.presetDeleted
+    text: "\uD504\uB9AC\uC14B '{0}'\uC744 \uC0AD\uC81C\uD588\uC2B5\uB2C8\uB2E4."
+  - key: message.gitUrlRequired
+    text: "\uCD94\uAC00\uD560 git URL\uC744 \uC785\uB825\uD558\uC138\uC694."
+  - key: message.gitUrlDuplicated
+    text: "\uC774\uBBF8 \uBAA9\uB85D\uC5D0 \uC788\uB294 URL\uC785\uB2C8\uB2E4: {0}"
+  - key: message.packageRemoved
+    text: "\uBAA9\uB85D\uC5D0\uC11C \uC0AD\uC81C\uD588\uC2B5\uB2C8\uB2E4: {0}"
+  - key: log.applyResumed
+    text: "'{0}' \uC801\uC6A9\uC744 \uC774\uC5B4\uC11C \uC9C4\uD589\uD569\uB2C8\uB2E4: {1}"
+  - key: log.playModeBlockedByCollect
+    text: "\uBAA9\uB85D \uAC31\uC2E0 \uC911\uC5D0\uB294 Play Mode\uC5D0 \uB4E4\uC5B4\uAC08 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. \uB05D\uB09C \uB4A4 \uB2E4\uC2DC \uC2E4\uD589\uD558\uC138\uC694."
+  - key: log.playModeBlockedByApply
+    text: "\uD504\uB9AC\uC14B \uC801\uC6A9 \uC911\uC5D0\uB294 Play Mode\uC5D0 \uB4E4\uC5B4\uAC08 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. \uB05D\uB09C \uB4A4 \uB2E4\uC2DC \uC2E4\uD589\uD558\uC138\uC694."
+  - key: log.packageHeaderUnreadable
+    text: "\uC0C1\uD488 \uC815\uBCF4\uB97C \uC77D\uC9C0 \uBABB\uD574 \uAC74\uB108\uB701\uB2C8\uB2E4: {0} ({1})"
+  - key: log.packageHeaderEmpty
+    text: "\uC0C1\uD488 \uC815\uBCF4\uAC00 \uBE44\uC5B4 \uC788\uC5B4 \uAC74\uB108\uB701\uB2C8\uB2E4: {0}"
+  - key: error.alreadyBusy
+    text: "\uC774\uBBF8 \uC9C4\uD589 \uC911\uC778 \uC791\uC5C5\uC774 \uC788\uC2B5\uB2C8\uB2E4: {0}"
+  - key: error.playModeStart
+    text: "Play Mode\uC5D0\uC11C\uB294 \uBAA9\uB85D \uAC31\uC2E0, \uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D, \uD504\uB9AC\uC14B \uC801\uC6A9\uC744 \uC2DC\uC791\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: error.uxmlNotFound
+    text: "UXML \uD30C\uC77C\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4: {0}"
+  - key: progress.collectInterrupted
+    text: "\uBAA9\uB85D \uAC31\uC2E0\uC774 \uC2A4\uD06C\uB9BD\uD2B8 \uB9AC\uB85C\uB4DC\uB85C \uC911\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uB2E4\uC2DC \uC2E4\uD589\uD558\uC138\uC694."
+  - key: progress.collectFinished
+    text: "\uBAA9\uB85D \uAC31\uC2E0 \uC644\uB8CC"
+  - key: progress.applyStarted
+    text: "'{0}' \uC801\uC6A9 \uC2DC\uC791"
+  - key: progress.applyFinished
+    text: "'{0}' \uC801\uC6A9 \uC644\uB8CC: \uD328\uD0A4\uC9C0 {1}\uAC1C \u2014 \uC131\uACF5 {2}, \uD655\uC778 \uD544\uC694 {3}, \uAC74\uB108\uB700 {4}, \uC2E4\uD328 {5}"
+  - key: progress.applyCancelled
+    text: "'{0}' \uC801\uC6A9 \uC911\uB2E8: \uD328\uD0A4\uC9C0 {1}\uAC1C \u2014 \uC131\uACF5 {2}, \uD655\uC778 \uD544\uC694 {3}, \uAC74\uB108\uB700 {4}, \uC2E4\uD328 {5}"
+  - key: collect.timeout
+    text: "{0}: {1}\uBD84 \uC548\uC5D0 \uB05D\uB098\uC9C0 \uC54A\uC544 \uAC74\uB108\uB700"
+  - key: collect.failed
+    text: "{0}: \uC2E4\uD328 - {1}"
+  - key: collect.result
+    text: "{0}: {1}\uAC1C \uC218\uC9D1 (\uC0C8 \uD56D\uBAA9 {2}\uAC1C)"
+  - key: collect.descriptionUnavailable
+    text: "{0}: \uC124\uBA85\uC744 \uAC00\uC838\uC624\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4 - {1}"
+  - key: collect.descriptionFailed
+    text: "{0}: \uC124\uBA85\uC744 \uBC1B\uC9C0 \uBABB\uD55C \uD56D\uBAA9 {1}\uAC1C - {2}"
+  - key: collect.assetStoreLoginRequired
+    text: "Unity \uACC4\uC815\uC5D0 \uB85C\uADF8\uC778\uD574\uC57C \uAD6C\uB9E4 \uBAA9\uB85D\uC744 \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: apply.cancelled
+    text: "\uC911\uB2E8\uB428"
+  - key: upm.cancelledInFlight
+    text: "\uC911\uB2E8\uB428: \uC774\uBBF8 \uBCF4\uB0B8 \uC124\uCE58 \uC694\uCCAD\uC740 Unity\uAC00 \uB9C8\uCE60 \uC218 \uC788\uC5B4 \uC124\uCE58\uB410\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: apply.fallback
+    text: "[\uB300\uCCB4 \uACBD\uB85C] {0}: {1}"
+  - key: outcome.success
+    text: "\uC131\uACF5"
+  - key: outcome.skipped
+    text: "\uAC74\uB108\uB700"
+  - key: outcome.failed
+    text: "\uC2E4\uD328"
+  - key: outcome.unverified
+    text: "\uD655\uC778 \uD544\uC694"
+  - key: common.joined
+    text: '{0} / {1}'
+  - key: bridge.missingMembers
+    text: "Unity {0}\uC5D0\uC11C Package Manager \uB0B4\uBD80 API\uB97C \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4: {1}"
+  - key: details.gitUrlNotWeb
+    text: "\uBE0C\uB77C\uC6B0\uC800\uB85C \uC5F4 \uC218 \uC5C6\uB294 \uC8FC\uC18C\uC785\uB2C8\uB2E4: {0}"
+  - key: step.upmInstall
+    text: "UPM \uC124\uCE58"
+  - key: step.assetStoreDownload
+    text: "Asset Store \uB2E4\uC6B4\uB85C\uB4DC"
+  - key: step.assetStoreImport
+    text: "Asset Store \uC784\uD3EC\uD2B8"
+  - key: upm.progress.checkInstalled
+    text: "UPM \uC124\uCE58: \uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uD655\uC778 \uC911"
+  - key: upm.progress.installing
+    text: "UPM \uC124\uCE58 ({0}/{1}): {2}"
+  - key: upm.progress.retrying
+    text: "UPM \uC7AC\uC2DC\uB3C4 ({0}/{1}): {2}"
+  - key: upm.progress.verify
+    text: "UPM \uC124\uCE58: \uC124\uCE58 \uACB0\uACFC \uD655\uC778 \uC911"
+  - key: upm.listTimeout
+    text: "UPM\uC774 {0}\uBD84 \uB3D9\uC548 \uC124\uCE58 \uBAA9\uB85D \uC870\uD68C\uC5D0 \uC751\uB2F5\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4."
+  - key: upm.listFailed
+    text: "\uC124\uCE58 \uBAA9\uB85D \uC870\uD68C \uC2E4\uD328: {0}"
+  - key: upm.alreadyInstalled
+    text: "\uC774\uBBF8 \uC124\uCE58\uB428"
+  - key: upm.installTimeout
+    text: "UPM\uC774 {0}\uBD84 \uB3D9\uC548 \uC751\uB2F5\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4."
+  - key: upm.installFailedNoMessage
+    text: "UPM \uC124\uCE58 \uC694\uCCAD\uC774 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4(\uC624\uB958 \uBA54\uC2DC\uC9C0 \uC5C6\uC74C)."
+  - key: upm.verifyTimeout
+    text: "UPM\uC774 {0}\uBD84 \uB3D9\uC548 \uC124\uCE58 \uACB0\uACFC \uC870\uD68C\uC5D0 \uC751\uB2F5\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4(\uC124\uCE58\uAC00 \uACC4\uC18D \uC9C4\uD589 \uC911\uC77C \uC218 \uC788\uC74C)."
+  - key: upm.verifyFailed
+    text: "\uC124\uCE58 \uACB0\uACFC \uC870\uD68C \uC2E4\uD328: {0}"
+  - key: upm.notInstalled
+    text: "\uC124\uCE58\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4({0}\uBD84 \uB0B4 \uD655\uC778 \uC2E4\uD328)."
+  - key: download.alreadyDownloaded
+    text: "\uC774\uBBF8 \uB2E4\uC6B4\uB85C\uB4DC\uB428"
+  - key: download.loginRequired
+    text: "Unity \uACC4\uC815\uC5D0 \uB85C\uADF8\uC778\uD574\uC57C \uB2E4\uC6B4\uB85C\uB4DC\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: download.cancelled
+    text: "\uC911\uB2E8\uB428(\uB2E4\uC6B4\uB85C\uB4DC \uCDE8\uC18C)"
+  - key: download.localFileMissing
+    text: "\uB2E4\uC6B4\uB85C\uB4DC\uB294 \uB05D\uB0AC\uC9C0\uB9CC \uB85C\uCEEC \uD30C\uC77C\uC744 \uCC3E\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4."
+  - key: download.noProgress
+    text: "{0}\uCD08 \uB3D9\uC548 \uB2E4\uC6B4\uB85C\uB4DC \uC9C4\uD589\uC774 \uC5C6\uC2B5\uB2C8\uB2E4(\uB85C\uADF8\uC778\xB7\uC774\uC6A9\uC57D\uAD00 \uB3D9\uC758\xB7\uB124\uD2B8\uC6CC\uD06C\uB97C \uD655\uC778\uD558\uC138\uC694)."
+  - key: download.progress
+    text: "Asset Store \uB2E4\uC6B4\uB85C\uB4DC \uC911 (\uB0A8\uC740 {0}\uAC1C)"
+  - key: download.failedWithState
+    text: "\uB2E4\uC6B4\uB85C\uB4DC \uC2E4\uD328({0})"
+  - key: import.reason.reloadWithoutRecord
+    text: "\uB9AC\uB85C\uB4DC\uB85C \uC644\uB8CC \uC774\uBCA4\uD2B8\uB97C \uBC1B\uC9C0 \uBABB\uD588\uACE0 \uC784\uD3EC\uD2B8 \uAE30\uB85D\uB3C4 \uC5C6\uC74C"
+  - key: import.reason.reload
+    text: "\uB9AC\uB85C\uB4DC\uB85C \uC644\uB8CC \uC774\uBCA4\uD2B8\uB97C \uBC1B\uC9C0 \uBABB\uD568"
+  - key: import.reason.timeout
+    text: "{0}\uBD84 \uB3D9\uC548 \uC784\uD3EC\uD2B8 \uC644\uB8CC \uC774\uBCA4\uD2B8\uAC00 \uC5C6\uC74C"
+  - key: import.alreadyImported
+    text: "\uC774\uBBF8 \uC784\uD3EC\uD2B8\uB428"
+  - key: import.noLocalFile
+    text: "\uB85C\uCEEC \uD30C\uC77C\uC774 \uC5C6\uC2B5\uB2C8\uB2E4(\uB2E4\uC6B4\uB85C\uB4DC\uB418\uC9C0 \uC54A\uC74C)."
+  - key: import.progress
+    text: "Asset Store \uC784\uD3EC\uD2B8 {0}/{1}: {2}"
+  - key: import.progress.publicApi
+    text: "Asset Store \uC784\uD3EC\uD2B8 {0}/{1}: {2} (\uACF5\uAC1C API \uC784\uD3EC\uD2B8: \uC11C\uBA85 \uD655\uC778 \uCC3D\uC774 \uB728\uBA74 'Import Anyway'\uB97C \uB20C\uB7EC\uC57C \uC9C4\uD589\uB429\uB2C8\uB2E4)"
+  - key: import.unreadable
+    text: "\uD655\uC778 \uBD88\uAC00: \uD328\uD0A4\uC9C0 \uD30C\uC77C\uC744 \uC77D\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4({0}) ({1})"
+  - key: import.noAssetList
+    text: "\uD655\uC778 \uBD88\uAC00: \uD328\uD0A4\uC9C0\uC5D0\uC11C \uC5D0\uC14B \uBAA9\uB85D\uC744 \uCC3E\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4 ({0})"
+  - key: import.allAssetsPresent
+    text: "\uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C \uD328\uD0A4\uC9C0 \uC5D0\uC14B {0}\uAC1C \uD655\uC778 ({1})"
+  - key: import.noAssetsPresent
+    text: "\uD328\uD0A4\uC9C0 \uC5D0\uC14B\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0 \uC5C6\uC2B5\uB2C8\uB2E4(0/{0}) ({1})"
+  - key: import.someAssetsPresent
+    text: "\uD328\uD0A4\uC9C0 \uC5D0\uC14B \uC77C\uBD80\uB9CC \uD655\uC778({0}/{1}) ({2})"
+  - key: import.publicApiImported
+    text: "\uACF5\uAC1C API\uB85C \uC784\uD3EC\uD2B8\uB428(AssetOrigin \uBBF8\uAE30\uB85D)"
+  - key: import.cancelled
+    text: "\uC784\uD3EC\uD2B8\uAC00 \uCDE8\uC18C\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+  - key: import.cancelledInFlight
+    text: "\uC911\uB2E8\uB428: \uC2DC\uC791\uD55C \uC784\uD3EC\uD2B8\uB294 Unity\uAC00 \uB9C8\uCE60 \uC218 \uC788\uC5B4 \uC784\uD3EC\uD2B8\uB410\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: package.fileTruncated
+    text: "\uD328\uD0A4\uC9C0 \uD30C\uC77C\uC774 \uC798\uB824 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: package.tarHeaderUnreadable
+    text: "\uD328\uD0A4\uC9C0\uC758 tar \uD5E4\uB354\uB97C \uC77D\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4."
+  - key: preset.duplicateName
+    text: "\uAC19\uC740 \uC774\uB984\uC758 \uD504\uB9AC\uC14B\uC774 \uC788\uC2B5\uB2C8\uB2E4: {0}"
+  - key: preset.nameRequired
+    text: "\uD504\uB9AC\uC14B \uC774\uB984\uC744 \uC785\uB825\uD558\uC138\uC694."
+  - key: preset.invalidNameChars
+    text: "\uD504\uB9AC\uC14B \uC774\uB984\uC5D0 \uC0AC\uC6A9\uD560 \uC218 \uC5C6\uB294 \uBB38\uC790\uAC00 \uC788\uC2B5\uB2C8\uB2E4: {0}"
+  - key: presetFile.empty
+    text: "\uD30C\uC77C\uC774 \uBE44\uC5B4 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: presetFile.invalidJson
+    text: "JSON \uD615\uC2DD \uC624\uB958: {0}"
+  - key: presetFile.unknownType
+    text: "{0}\uBC88 \uD56D\uBAA9: \uC54C \uC218 \uC5C6\uB294 type {1}"
+  - key: presetFile.emptyId
+    text: "{0}\uBC88 \uD56D\uBAA9: id \uAC00 \uBE44\uC5B4 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: presetFile.emptyDisplayName
+    text: "{0}\uBC88 \uD56D\uBAA9({1}): displayName \uC774 \uBE44\uC5B4 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: presetFile.duplicateItem
+    text: "\uAC19\uC740 \uD56D\uBAA9\uC774 \uC5EC\uB7EC \uBC88 \uC788\uC2B5\uB2C8\uB2E4: {0} {1}"
+  - key: ui.refresh.tooltip
+    text: "\uD328\uD0A4\uC9C0 \uBAA9\uB85D \uAC31\uC2E0: Registry \uC804\uCCB4, Asset Store \uAD6C\uB9E4 \uBAA9\uB85D, \uC124\uCE58\uB41C Git \uD328\uD0A4\uC9C0\uB97C \uBAA9\uB85D\uC5D0 \uCD94\uAC00\xB7\uAC31\uC2E0\uD569\uB2C8\uB2E4. \uD504\uB9AC\uC14B\uC740 \uBC14\uB00C\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+  - key: ui.registerInstalled
+    text: "\uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D"
+  - key: ui.registerInstalled.tooltip
+    text: "\uD604\uC7AC \uD504\uB85C\uC81D\uD2B8\uC5D0 \uC124\uCE58\uB41C \uD328\uD0A4\uC9C0\uB97C \uCC3E\uC544, \uC120\uD0DD\uB41C \uD504\uB9AC\uC14B\uC5D0 \uB4F1\uB85D\uD560 \uAC83\uC744 \uCC3D\uC5D0\uC11C \uACE0\uB985\uB2C8\uB2E4(\uCD94\uAC00\uB9CC). \uB2E4\uB978 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C \uAC19\uC740 \uBC29\uBC95\uC73C\uB85C \uC124\uCE58\uD560 \uC218 \uC5C6\uB294 \uD328\uD0A4\uC9C0(\uB0B4\uC7A5 \uBAA8\uB4C8, \uC5D0\uB514\uD130\uC5D0 \uD3EC\uD568\uB41C \uD328\uD0A4\uC9C0(\uCD9C\uCC98 BuiltIn), \uB85C\uCEEC \uD328\uD0A4\uC9C0)\uB294 \uC81C\uC678\uD569\uB2C8\uB2E4. Asset Store \uC5D0\uC14B\uC740 \uBAA9\uB85D\uC5D0 \uC788\uB294 \uAD6C\uB9E4 \uD56D\uBAA9 \uC911 \uC784\uD3EC\uD2B8\uB41C \uAC83\uB9CC \uBCF4\uC5EC\uC90D\uB2C8\uB2E4."
+  - key: log.playModeBlockedByRegister
+    text: "\uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D \uC911\uC5D0\uB294 Play Mode\uC5D0 \uB4E4\uC5B4\uAC08 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. \uB05D\uB09C \uB4A4 \uB2E4\uC2DC \uC2E4\uD589\uD558\uC138\uC694."
+  - key: progress.registerInterrupted
+    text: "\uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D\uC774 \uC2A4\uD06C\uB9BD\uD2B8 \uB9AC\uB85C\uB4DC\uB85C \uC911\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uB2E4\uC2DC \uC2E4\uD589\uD558\uC138\uC694."
+  - key: progress.registerFinished
+    text: "\uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D \uC644\uB8CC: '{0}'\uC5D0 {1}\uAC1C \uCD94\uAC00"
+  - key: register.result
+    text: "{0}: {1}\uAC1C \uB4F1\uB85D, \uC774\uBBF8 \uB4F1\uB85D\uB428 {2}\uAC1C, \uC120\uD0DD \uC548 \uD568 {3}\uAC1C, \uC81C\uC678 {4}\uAC1C"
+  - key: register.assetStoreNoPurchases
+    text: "MyAssets: \uBAA9\uB85D\uC5D0 \uAD6C\uB9E4 \uD56D\uBAA9\uC774 \uC5C6\uC5B4 \uC784\uD3EC\uD2B8 \uC5EC\uBD80\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4. \uBAA9\uB85D \uAC31\uC2E0\uC744 \uBA3C\uC800 \uC2E4\uD589\uD558\uC138\uC694."
+  - key: register.assetStoreSessionOnly
+    text: "MyAssets: \uC774 Unity \uBC84\uC804\uC5D0\uC11C\uB294 \uC774\uC804 \uC138\uC158\uC758 \uC784\uD3EC\uD2B8 \uAE30\uB85D\uC744 \uC77D\uC744 \uC218 \uC5C6\uC5B4, \uC774\uBC88 \uC5D0\uB514\uD130 \uC138\uC158\uC5D0\uC11C \uC784\uD3EC\uD2B8\uD55C \uC5D0\uC14B\uB9CC \uD655\uC778\uD588\uC2B5\uB2C8\uB2E4."
+  - key: menu.changeSharedFolder
+    text: "\uD3F4\uB354 \uBCC0\uACBD\u2026"
+  - key: menu.openSharedFolder
+    text: "\uD3F4\uB354 \uC5F4\uAE30"
+  - key: dialog.changeSharedFolder.title
+    text: "\uACF5\uC6A9 \uD3F4\uB354 \uC120\uD0DD"
+  - key: dialog.copySharedData.title
+    text: "\uACF5\uC6A9 \uD3F4\uB354 \uBCC0\uACBD"
+  - key: dialog.copySharedData.message
+    text: "\uC120\uD0DD\uD55C \uD3F4\uB354\uC5D0 \uD504\uB9AC\uC14B\uACFC \uD328\uD0A4\uC9C0 \uBAA9\uB85D\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.\n\uD604\uC7AC \uB370\uC774\uD130\uB97C \uBCF5\uC0AC\uD560\uAE4C\uC694?\n\n\uD604\uC7AC: {0}\n\uC0C8 \uD3F4\uB354: {1}"
+  - key: dialog.copySharedData.ok
+    text: "\uBCF5\uC0AC"
+  - key: dialog.copySharedData.alt
+    text: "\uBCF5\uC0AC\uD558\uC9C0 \uC54A\uC74C"
+  - key: message.sharedFolderChanged
+    text: "\uACF5\uC6A9 \uD3F4\uB354\uB97C \uBC14\uAFE8\uC2B5\uB2C8\uB2E4: {0}"
+  - key: message.sharedFolderCopyFailed
+    text: "\uB370\uC774\uD130\uB97C \uBCF5\uC0AC\uD558\uC9C0 \uBABB\uD574 \uACF5\uC6A9 \uD3F4\uB354\uB97C \uBC14\uAFB8\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4: {0}"
+  - key: message.sharedFolderBusy
+    text: "\uBAA9\uB85D \uAC31\uC2E0\xB7\uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D\xB7\uD504\uB9AC\uC14B \uC801\uC6A9 \uC911\uC5D0\uB294 \uACF5\uC6A9 \uD3F4\uB354\uB97C \uBC14\uAFC0 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: message.presetCreateFailed
+    text: "\uD504\uB9AC\uC14B\uC744 \uB9CC\uB4E4\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4: {0}"
+  - key: message.presetDeleteFailed
+    text: "\uD504\uB9AC\uC14B\uC744 \uC0AD\uC81C\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4: {0}"
+  - key: data.unreadableFile
+    text: "\uC77D\uC744 \uC218 \uC5C6\uB294 \uD30C\uC77C\uC744 \uC81C\uC678\uD588\uC2B5\uB2C8\uB2E4: {0} - {1}"
+  - key: data.catalogUnreadable
+    text: "\uD328\uD0A4\uC9C0 \uBAA9\uB85D \uD30C\uC77C\uC744 \uC77D\uC744 \uC218 \uC5C6\uC5B4 \uBAA9\uB85D\uC744 \uBC14\uAFC0 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. \uD30C\uC77C\uC744 \uACE0\uCE58\uAC70\uB098 \uC9C0\uC6B0\uC138\uC694: {0} - {1}"
+  - key: data.changedElsewhere
+    text: "\uD504\uB9AC\uC14B '{0}'\uC774(\uAC00) \uB2E4\uB978 \uACF3\uC5D0\uC11C \uC0AD\uC81C\uB418\uC5C8\uAC70\uB098 \uC774\uB984\uC774 \uBC14\uB00C\uC5C8\uC2B5\uB2C8\uB2E4."
+  - key: data.saveFailed
+    text: "\uC800\uC7A5\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4: {0} - {1}"
+  - key: data.folderUnavailable
+    text: "\uACF5\uC6A9 \uD3F4\uB354\uB97C \uC4F8 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4: {0} - {1}"
+  - key: preset.nameTakenByUnreadable
+    text: "\uACF5\uC6A9 \uD3F4\uB354\uC5D0 \uAC19\uC740 \uC774\uB984\uC758 \uC77D\uC744 \uC218 \uC5C6\uB294 \uD30C\uC77C\uC774 \uC788\uC2B5\uB2C8\uB2E4: {0}"
+  - key: trash.unsupported
+    text: "\uC774 OS\uC5D0\uC11C\uB294 \uD30C\uC77C\uC744 \uD734\uC9C0\uD1B5\uC73C\uB85C \uBCF4\uB0BC \uC218 \uC5C6\uC2B5\uB2C8\uB2E4: {0}"
+  - key: trash.failed
+    text: "\uD30C\uC77C\uC744 \uD734\uC9C0\uD1B5\uC73C\uB85C \uBCF4\uB0B4\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4: {0} ({1})"
+  - key: progress.registerSaveFailed
+    text: "\uC124\uCE58\uB41C \uD328\uD0A4\uC9C0\uB97C '{0}'\uC5D0 \uC800\uC7A5\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4."
+  - key: ui.sharedFolder
+    text: "\uACF5\uC6A9 \uD3F4\uB354"
+  - key: ui.sharedFolder.tooltip
+    text: "\uD504\uB9AC\uC14B\uACFC \uD328\uD0A4\uC9C0 \uBAA9\uB85D\uC744 \uC800\uC7A5\uD558\uB294 \uACF5\uC6A9 \uD3F4\uB354\uC785\uB2C8\uB2E4. \uAC19\uC740 PC\uC758 \uBAA8\uB4E0 \uD504\uB85C\uC81D\uD2B8\uAC00 \uD568\uAED8 \uC501\uB2C8\uB2E4.\n{0}"
+  - key: dialog.applyPreset.summary
+    text: "\uC0C8\uB85C \uC124\uCE58 {0}\uAC1C \xB7 \uC774\uBBF8 \uC124\uCE58\uB428 {1}\uAC1C"
+  - key: dialog.badge.installed
+    text: "\uC124\uCE58\uB428"
+  - key: dialog.badge.imported
+    text: "\uC784\uD3EC\uD2B8\uB428"
+  - key: dialog.section.empty
+    text: "\uC5C6\uC74C"
+  - key: dialog.next
+    text: "\uB2E4\uC74C"
+  - key: dialog.reinstall.title
+    text: "\uC774\uBBF8 \uC124\uCE58\uB41C \uD328\uD0A4\uC9C0"
+  - key: dialog.reinstall.message
+    text: "\uC774\uBBF8 \uC124\uCE58\uB41C \uD328\uD0A4\uC9C0\uAC00 {0}\uAC1C \uC788\uC2B5\uB2C8\uB2E4. \uB2E4\uC2DC \uC124\uCE58\xB7\uC784\uD3EC\uD2B8\uD560 \uD56D\uBAA9\uC744 \uCCB4\uD06C\uD558\uC138\uC694.\n\uCCB4\uD06C\uD558\uC9C0 \uC54A\uC740 \uD56D\uBAA9\uC740 \uC774\uBC88 \uC801\uC6A9\uC5D0\uC11C \uC81C\uC678\uB429\uB2C8\uB2E4(\uD504\uB9AC\uC14B\uC740 \uBC14\uB00C\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4)."
+  - key: dialog.reinstall.warning.unityRegistry
+    text: "UnityRegistry: \uB2E4\uC2DC \uC694\uCCAD\uD558\uBA74 \uC5D0\uB514\uD130 \uAD8C\uC7A5 \uBC84\uC804\uC73C\uB85C \uBC14\uB014 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: dialog.reinstall.warning.myAssets
+    text: "MyAssets: \uB2E4\uC2DC \uC784\uD3EC\uD2B8\uD558\uBA74 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C \uACE0\uCE5C \uC5D0\uC14B \uD30C\uC77C\uC744 \uD328\uD0A4\uC9C0 \uB0B4\uC6A9\uC73C\uB85C \uB36E\uC5B4\uC501\uB2C8\uB2E4."
+  - key: dialog.reinstall.warning.git
+    text: "Git: \uB2E4\uC2DC \uC694\uCCAD\uD558\uBA74 \uC800\uC7A5\uC18C\uC758 \uCD5C\uC2E0 \uCEE4\uBC0B\uC73C\uB85C \uAC31\uC2E0\uB429\uB2C8\uB2E4."
+  - key: dialog.reinstall.all
+    text: "\uBAA8\uB450 \uC7AC\uC784\uD3EC\uD2B8"
+  - key: dialog.reinstall.none
+    text: "\uBAA8\uB450 \uC81C\uC678"
+  - key: dialog.reinstall.summary
+    text: "\uC7AC\uC784\uD3EC\uD2B8 {0}\uAC1C \xB7 \uC81C\uC678 {1}\uAC1C"
+  - key: message.applyCancelled
+    text: "'{0}' \uD504\uB9AC\uC14B \uC801\uC6A9\uC744 \uCDE8\uC18C\uD588\uC2B5\uB2C8\uB2E4."
+  - key: progress.installCheckFailed
+    text: "'{0}' \uD504\uB9AC\uC14B \uD56D\uBAA9\uC758 \uC124\uCE58 \uC0C1\uD0DC\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD574 \uC801\uC6A9\uC744 \uC2DC\uC791\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4. {1}"
+  - key: progress.installCheckInterrupted
+    text: "\uC124\uCE58 \uC0C1\uD0DC \uD655\uC778\uC774 \uC2A4\uD06C\uB9BD\uD2B8 \uB9AC\uB85C\uB4DC\uB85C \uC911\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uB2E4\uC2DC \uC801\uC6A9\uD558\uC138\uC694."
+  - key: check.listFailed
+    text: "\uD328\uD0A4\uC9C0 \uBAA9\uB85D \uC870\uD68C \uC2E4\uD328: {0}"
+  - key: check.timeout
+    text: "{0}\uBD84 \uC548\uC5D0 \uC751\uB2F5\uC774 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: check.assetStoreUnavailable
+    text: "MyAssets \uC784\uD3EC\uD2B8 \uC5EC\uBD80\uB97C \uD655\uC778\uD560 \uC218 \uC5C6\uC5B4 \uBAA8\uB450 \uC0C8\uB85C \uC784\uD3EC\uD2B8\uD560 \uD56D\uBAA9\uC73C\uB85C \uD45C\uC2DC\uD569\uB2C8\uB2E4. {0}"
+  - key: check.assetStoreSessionOnly
+    text: "\uC774 Unity \uBC84\uC804\uC5D0\uC11C\uB294 \uC774\uC804 \uC138\uC158\uC5D0 \uC784\uD3EC\uD2B8\uD55C \uC5D0\uC14B\uC744 \uD655\uC778\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. '\uC784\uD3EC\uD2B8\uB428' \uD45C\uC2DC\uAC00 \uC5C6\uC5B4\uB3C4 \uC774\uBBF8 \uC784\uD3EC\uD2B8\uB41C \uC5D0\uC14B\uC740 \uB2E4\uC2DC \uC784\uD3EC\uD2B8\uB429\uB2C8\uB2E4."
+  - key: log.playModeBlockedByInstallCheck
+    text: "\uC124\uCE58 \uC0C1\uD0DC\uB97C \uD655\uC778\uD558\uB294 \uC911\uC774\uB77C Play Mode \uC9C4\uC785\uC744 \uCDE8\uC18C\uD588\uC2B5\uB2C8\uB2E4."
+  - key: apply.excluded
+    text: "\uC0AC\uC6A9\uC790\uAC00 \uC81C\uC678\uD568"
+  - key: upm.reinstalled
+    text: "\uB2E4\uC2DC \uC694\uCCAD\uD568 \u2014 \uBC84\uC804 {0} \u2192 {1}"
+  - key: upm.reinstalledSameVersion
+    text: "\uB2E4\uC2DC \uC694\uCCAD\uD568 \u2014 \uBC84\uC804 \uADF8\uB300\uB85C {0}"
+  - key: import.reimported
+    text: "\uB2E4\uC2DC \uC784\uD3EC\uD2B8\uD568"
+  - key: import.reimportUnverified
+    text: "\uB2E4\uC2DC \uC784\uD3EC\uD2B8\uD588\uB294\uC9C0 \uD655\uC778\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4(\uC774\uBBF8 \uC784\uD3EC\uD2B8\uB41C \uC5D0\uC14B\uC774\uB77C \uAE30\uB85D\xB7\uD30C\uC77C\uB85C \uAD6C\uBD84\uD560 \uC218 \uC5C6\uC74C). {0}"
+  - key: dialog.badge.update
+    text: "\uC5C5\uB370\uC774\uD2B8 {0} \u2192 {1}"
+  - key: dialog.badge.pinned
+    text: "\uACE0\uC815\uB428 ({0})"
+  - key: dialog.applyPreset.summaryWithUpdates
+    text: "\uC0C8\uB85C \uC124\uCE58 {0}\uAC1C \xB7 \uC774\uBBF8 \uC124\uCE58\uB428 {1}\uAC1C (\uC5C5\uB370\uC774\uD2B8 \uAC00\uB2A5 {2}\uAC1C)"
+  - key: dialog.reinstall.summaryWithUpdates
+    text: "\uC7AC\uC784\uD3EC\uD2B8 {0}\uAC1C \xB7 \uC81C\uC678 {1}\uAC1C (\uC5C5\uB370\uC774\uD2B8 \uAC00\uB2A5 {2}\uAC1C)"
+  - key: dialog.reinstall.updatesPreselected
+    text: "\uC5C5\uB370\uC774\uD2B8\uAC00 \uC788\uB294 \uD56D\uBAA9\uC740 \uC7AC\uC784\uD3EC\uD2B8(\uC5C5\uB370\uC774\uD2B8)\uB85C \uBBF8\uB9AC \uCCB4\uD06C\uD574 \uB450\uC5C8\uC2B5\uB2C8\uB2E4."
+  - key: check.update.assetStoreUnavailable
+    text: "MyAssets \uC5C5\uB370\uC774\uD2B8\uB97C \uD655\uC778\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. {0}"
+  - key: check.update.loginRequired
+    text: "Unity \uACC4\uC815\uC5D0 \uB85C\uADF8\uC778\uD558\uC9C0 \uC54A\uC544 MyAssets \uC5C5\uB370\uC774\uD2B8\uB97C \uD655\uC778\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4."
+  - key: check.update.assetStoreFailed
+    text: "MyAssets \uC5C5\uB370\uC774\uD2B8 \uD655\uC778 \uC2E4\uD328: {0}"
+  - key: check.update.gitFailed
+    text: "Git \uC5C5\uB370\uC774\uD2B8 \uD655\uC778 \uC2E4\uD328({0}): {1}"
+  - key: check.update.timeoutSeconds
+    text: "{0}\uCD08 \uC548\uC5D0 \uC751\uB2F5\uC774 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: git.notFound
+    text: "git \uC744 \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4(\uC624\uB958 {0}). git \uC774 \uC124\uCE58\uB3FC \uC788\uACE0 PATH \uC5D0 \uC788\uB294\uC9C0 \uD655\uC778\uD558\uC138\uC694."
+  - key: git.exitCode
+    text: "git \uC774 \uC624\uB958\uB85C \uB05D\uB0AC\uC2B5\uB2C8\uB2E4(\uCF54\uB4DC {0}): {1}"
+  - key: git.refNotFound
+    text: "\uC6D0\uACA9 \uC800\uC7A5\uC18C\uC5D0 '{0}' \uC774(\uAC00) \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: download.refreshed
+    text: "\uCD5C\uC2E0 \uBC84\uC804 \uBC1B\uC74C {0} \u2192 {1}"
+  - key: check.update.registryOffline
+    text: "\uC628\uB77C\uC778 \uD328\uD0A4\uC9C0 \uBAA9\uB85D\uC744 \uBC1B\uC9C0 \uBABB\uD574 \uB85C\uCEEC \uCE90\uC2DC\uB85C \uD310\uC815\uD588\uC2B5\uB2C8\uB2E4(UnityRegistry \uC5C5\uB370\uC774\uD2B8\uAC00 \uBE60\uC9C8 \uC218 \uC788\uC74C): {0}"
+  - key: download.refreshNotUpdated
+    text: "\uBC1B\uAE30\uB294 \uB05D\uB0AC\uC9C0\uB9CC \uB85C\uCEEC \uD30C\uC77C\uC774 \uCD5C\uC2E0 \uBC84\uC804\uC73C\uB85C \uBC14\uB00C\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4."
+  - key: import.notLatest
+    text: "\uCD5C\uC2E0 \uBC84\uC804\uC744 \uBC1B\uC9C0 \uBABB\uD574 \uC784\uD3EC\uD2B8\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4(\uC608\uC804 \uBC84\uC804\uC73C\uB85C \uB36E\uC5B4\uC4F0\uC9C0 \uC54A\uC74C)."
+  - key: progress.gitUrlCheckInterrupted
+    text: "git URL \uD655\uC778\uC774 \uC2A4\uD06C\uB9BD\uD2B8 \uB9AC\uB85C\uB4DC\uB85C \uC911\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uB2E4\uC2DC \uCD94\uAC00\uD558\uC138\uC694."
+  - key: log.playModeBlockedByGitUrlCheck
+    text: "git URL\uC744 \uD655\uC778\uD558\uB294 \uC911\uC774\uB77C Play Mode \uC9C4\uC785\uC744 \uCDE8\uC18C\uD588\uC2B5\uB2C8\uB2E4."
+  - key: message.gitUrlInvalid
+    text: "git URL\uC744 \uCD94\uAC00\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4: {0}\n{1}"
+  - key: message.gitUrlAddedWithName
+    text: "git URL\uC744 \uCD94\uAC00\uD558\uACE0 '{0}'\uC5D0 \uCCB4\uD06C\uD588\uC2B5\uB2C8\uB2E4: {1} (\uD328\uD0A4\uC9C0 {2})"
+  - key: message.gitUrlAddedUnverified
+    text: "git URL\uC744 \uD655\uC778\uD558\uC9C0 \uBABB\uD588\uC9C0\uB9CC \uCD94\uAC00\uD558\uACE0 '{0}'\uC5D0 \uCCB4\uD06C\uD588\uC2B5\uB2C8\uB2E4: {1}\n{2}"
+  - key: gitCheck.notGitUrl
+    text: "UPM\uC774 git URL\uB85C \uC778\uC2DD\uD558\uC9C0 \uC54A\uB294 \uD615\uC2DD\uC785\uB2C8\uB2E4. \uC800\uC7A5\uC18C \uC8FC\uC18C\uAC00 .git\uC73C\uB85C \uB05D\uB098\uAC70\uB098 git+\uB85C \uC2DC\uC791\uD574\uC57C \uD569\uB2C8\uB2E4."
+  - key: gitCheck.repositoryNotFound
+    text: "\uC800\uC7A5\uC18C\uB97C \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4(\uC8FC\uC18C\uAC00 \uD2C0\uB838\uAC70\uB098 \uC811\uADFC \uAD8C\uD55C\uC774 \uC5C6\uC74C): {0}"
+  - key: gitCheck.revisionNotFound
+    text: "\uB9AC\uBE44\uC804 '{0}'\uC774(\uAC00) \uC800\uC7A5\uC18C\uC5D0 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: gitCheck.shortCommit
+    text: "\uC9E7\uC740 \uCEE4\uBC0B \uD574\uC2DC('{0}')\uB294 \uC124\uCE58\uD558\uC9C0 \uC54A\uACE0 \uD655\uC778\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: gitCheck.noManifest
+    text: "\uC800\uC7A5\uC18C\uC5D0 UPM \uD328\uD0A4\uC9C0(package.json)\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: gitCheck.manifestNotAtPath
+    text: "'{0}'\uC5D0 package.json\uC774 \uC5C6\uC2B5\uB2C8\uB2E4. \uC800\uC7A5\uC18C\uC5D0\uC11C \uCC3E\uC740 \uD328\uD0A4\uC9C0\uC758 URL:\n{1}"
+  - key: gitCheck.candidatesWithMore
+    text: "{0}\n\uC678 {1}\uAC1C"
+  - key: gitCheck.invalidManifest
+    text: "package.json\uC744 \uC77D\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4: {0}"
+  - key: gitCheck.manifestMissingFields
+    text: "package.json\uC5D0 name \uB610\uB294 version\uC774 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: applyProgress.title
+    text: "\uC644\uB8CC {0} / {1} ({2}%)"
+  - key: applyProgress.counts
+    text: "\uC131\uACF5 {0} \xB7 \uAC74\uB108\uB700 {1} \xB7 \uC2E4\uD328 {2} \xB7 \uD655\uC778 \uD544\uC694 {3}  |  \uB85C\uB4DC \uC911 {4} \xB7 \uB300\uAE30 {5}"
+  - key: applyItem.state.waiting
+    text: "\uB300\uAE30"
+  - key: applyItem.state.inProgress
+    text: "\uB85C\uB4DC \uC911"
+  - key: applyItem.state.done
+    text: "\uC644\uB8CC"
+  - key: applyItem.activity.installing
+    text: "\uC124\uCE58 \uC911"
+  - key: applyItem.activity.retrying
+    text: "\uC7AC\uC2DC\uB3C4 \uC911"
+  - key: applyItem.activity.verifying
+    text: "\uC124\uCE58 \uD655\uC778 \uC911"
+  - key: applyItem.activity.downloading
+    text: "\uB2E4\uC6B4\uB85C\uB4DC \uC911"
+  - key: applyItem.activity.importing
+    text: "\uC784\uD3EC\uD2B8 \uC911"
+  - key: applyItem.waiting.retry
+    text: "\uC7AC\uC2DC\uB3C4 \uB300\uAE30"
+  - key: applyItem.waiting.step
+    text: "{0} \uB300\uAE30"
+  - key: applyItem.detail.step
+    text: '{0}: {1}'
+  - key: ui.applyOverlay.close
+    text: "\uB2EB\uAE30"
+  - key: dialog.stopApply.title
+    text: "\uD504\uB9AC\uC14B \uC801\uC6A9 \uC911\uB2E8"
+  - key: dialog.stopApply.message
+    text: "\uD504\uB9AC\uC14B \uC801\uC6A9\uC744 \uBC14\uB85C \uC911\uB2E8\uD560\uAE4C\uC694?\n\n\uC544\uC9C1 \uC2DC\uC791\uD558\uC9C0 \uC54A\uC740 \uD56D\uBAA9\uC740 \uAC74\uB108\uB6F0\uACE0, \uBC1B\uB294 \uC911\uC778 \uB2E4\uC6B4\uB85C\uB4DC\uB294 \uCDE8\uC18C\uD569\uB2C8\uB2E4.\n\uC774\uBBF8 Unity\uC5D0 \uBCF4\uB0B8 \uC124\uCE58\u00B7\uC784\uD3EC\uD2B8\uC640 \uADF8\uC5D0 \uB530\uB978 \uCEF4\uD30C\uC77C\uC740 \uCDE8\uC18C\uD560 \uC218 \uC5C6\uC5B4 \uB05D\uAE4C\uC9C0 \uC9C4\uD589\uB420 \uC218 \uC788\uC2B5\uB2C8\uB2E4(\uD574\uB2F9 \uD56D\uBAA9\uC740 '\uD655\uC778 \uD544\uC694'\uB85C \uB0A8\uC2B5\uB2C8\uB2E4)."
+  - key: dialog.stopApply.ok
+    text: "\uC911\uB2E8"
+  - key: dialog.stopApply.cancel
+    text: "\uACC4\uC18D \uC9C4\uD589"
+  - key: message.gitUrlAddedFromSubfolder
+    text: "\uC800\uC7A5\uC18C \uB8E8\uD2B8\uC5D0 package.json\uC774 \uC5C6\uC5B4 '{0}'\uC5D0\uC11C \uCC3E\uC544 \uCD94\uAC00\uD558\uACE0 '{1}'\uC5D0 \uCCB4\uD06C\uD588\uC2B5\uB2C8\uB2E4: {2} (\uD328\uD0A4\uC9C0 {3})"
+  - key: register.excludedBuiltIn
+    text: "UnityRegistry: \uC5D0\uB514\uD130\uC5D0 \uD3EC\uD568\uB41C \uD328\uD0A4\uC9C0(\uB0B4\uC7A5 \uBAA8\uB4C8\xB7\uCD9C\uCC98 BuiltIn) {0}\uAC1C\uB294 \uC81C\uC678\uD588\uC2B5\uB2C8\uB2E4."
+  - key: register.excludedLocal
+    text: "UnityRegistry: \uB2E4\uB978 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C \uC124\uCE58\uD560 \uC218 \uC5C6\uB294 \uB85C\uCEEC \uD328\uD0A4\uC9C0 {0}\uAC1C\uB294 \uC81C\uC678\uD588\uC2B5\uB2C8\uB2E4: {1}"
+  - key: progress.registerPresetLoadFailed
+    text: "'{0}' \uD504\uB9AC\uC14B\uC744 \uC77D\uC744 \uC218 \uC5C6\uC5B4 \uC124\uCE58\uB41C \uD328\uD0A4\uC9C0\uB97C \uB4F1\uB85D\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4: {1}"
+  - key: dialog.register.title
+    text: "\uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D"
+  - key: dialog.register.message
+    text: "\uD504\uB9AC\uC14B '{0}'\uC5D0 \uB4F1\uB85D\uD560 \uD328\uD0A4\uC9C0\uB97C \uCCB4\uD06C\uD558\uC138\uC694. \uC774\uBBF8 \uB4F1\uB85D\uB41C \uD328\uD0A4\uC9C0\uB294 \uC5EC\uAE30\uC11C \uBE84 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - key: dialog.register.all
+    text: "\uBAA8\uB450 \uC120\uD0DD"
+  - key: dialog.register.none
+    text: "\uBAA8\uB450 \uD574\uC81C"
+  - key: dialog.register.summary
+    text: "\uC120\uD0DD {0} \xB7 \uC774\uBBF8 \uB4F1\uB85D {1}"
+  - key: dialog.register.ok
+    text: "\uB4F1\uB85D"
+  - key: dialog.badge.registered
+    text: "\uB4F1\uB85D\uB428"
+  - key: dialog.badge.scopedRegistry
+    text: "\uB808\uC9C0\uC2A4\uD2B8\uB9AC: {0}"
+  - key: dialog.badge.scopedRegistry.tooltip
+    text: "scoped registry '{0}'({1})\uC5D0\uC11C \uC124\uCE58\uD55C \uD328\uD0A4\uC9C0\uC785\uB2C8\uB2E4. \uC774 \uB808\uC9C0\uC2A4\uD2B8\uB9AC\uAC00 manifest\uC5D0 \uC5C6\uB294 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C\uB294 \uD504\uB9AC\uC14B\uC744 \uC801\uC6A9\uD560 \uB54C \uC124\uCE58\uC5D0 \uC2E4\uD328\uD569\uB2C8\uB2E4."
+  - key: message.registerCancelled
+    text: "'{0}' \uD504\uB9AC\uC14B\uC5D0 \uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uB4F1\uB85D\uC744 \uCDE8\uC18C\uD588\uC2B5\uB2C8\uB2E4."
+  - key: dialog.removeTool.title
+    text: "Package Setup Tool \uC81C\uAC70"
+  - key: dialog.removeTool.afterApply
+    text: "\uD504\uB9AC\uC14B \uC801\uC6A9\uC774 \uB05D\uB0AC\uC2B5\uB2C8\uB2E4. \uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C Package Setup Tool\uC744 \uC81C\uAC70\uD560\uAE4C\uC694?\n\n\uC124\uCE58\uD55C \uD328\uD0A4\uC9C0\uC640 \uACF5\uC6A9 \uD3F4\uB354\uC758 \uD504\uB9AC\uC14B\xB7\uCE74\uD0C8\uB85C\uADF8\uB294 \uADF8\uB300\uB85C \uB0A8\uC2B5\uB2C8\uB2E4."
+  - key: dialog.removeTool.message
+    text: "\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C Package Setup Tool\uC744 \uC81C\uAC70\uD560\uAE4C\uC694?\n\n\uC124\uCE58\uD55C \uD328\uD0A4\uC9C0\uC640 \uACF5\uC6A9 \uD3F4\uB354\uC758 \uD504\uB9AC\uC14B\xB7\uCE74\uD0C8\uB85C\uADF8\uB294 \uADF8\uB300\uB85C \uB0A8\uC2B5\uB2C8\uB2E4."
+  - key: dialog.removeTool.ok
+    text: "\uC81C\uAC70"
+  - key: dialog.removeTool.cancel
+    text: "\uB0A8\uACA8\uB450\uAE30"
+  - key: dialog.removeTool.close
+    text: "\uD655\uC778"
+  - key: dialog.removeTool.failed
+    text: "Package Setup Tool\uC744 \uC81C\uAC70\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.\n\n{0}"
+  - key: removeTool.trashFailed
+    text: "'{0}' \uD3F4\uB354\uB97C \uD734\uC9C0\uD1B5\uC73C\uB85C \uC62E\uAE30\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4."
+  - key: removeTool.failed
+    text: "Package Manager\uC5D0\uC11C '{0}'\uC744(\uB97C) \uC81C\uAC70\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4: {1}"
+  - key: log.removeToolStarted
+    text: "Package Setup Tool\uC744 \uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C \uC81C\uAC70\uD569\uB2C8\uB2E4: {0}"
+  - key: log.stateDeleteFailed
+    text: "\uB3C4\uAD6C \uC0C1\uD0DC \uD3F4\uB354 '{0}'\uC744(\uB97C) \uC9C0\uC6B0\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4: {1}"
+  - key: log.playModeBlockedByRemoveTool
+    text: "Package Setup Tool\uC744 \uC81C\uAC70\uD558\uB294 \uC911\uC774\uB77C Play Mode \uC9C4\uC785\uC744 \uCDE8\uC18C\uD588\uC2B5\uB2C8\uB2E4."
+  - key: progress.removeToolInterrupted
+    text: "\uC2A4\uD06C\uB9BD\uD2B8 \uB9AC\uB85C\uB4DC\uB85C Package Setup Tool \uC81C\uAC70 \uD655\uC778\uC774 \uC911\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uC544\uC9C1 \uB0A8\uC544 \uC788\uC73C\uBA74 \uBA54\uB274\uC5D0\uC11C \uB2E4\uC2DC \uC81C\uAC70\uD558\uC138\uC694."
+  - key: menu.duplicate
+    text: "\uBCF5\uC81C"
+  - key: ui.preset.copyName
+    text: "{0} \uBCF5\uC0AC\uBCF8"
+  - key: message.presetDuplicated
+    text: "\uD504\uB9AC\uC14B '{0}'\uC744 '{1}'(\uC73C)\uB85C \uBCF5\uC81C\uD588\uC2B5\uB2C8\uB2E4."
+  - key: message.presetDuplicateFailed
+    text: "\uD504\uB9AC\uC14B\uC744 \uBCF5\uC81C\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4: {0}"
+  - key: busy.collecting
+    text: "\uBAA9\uB85D \uAC31\uC2E0 \uC911\u2026"
+  - key: busy.registering
+    text: "\uC124\uCE58\uB41C \uD328\uD0A4\uC9C0 \uD655\uC778 \uC911\u2026"
+  - key: busy.checkingInstalled
+    text: "\uC124\uCE58 \uC0C1\uD0DC \uD655\uC778 \uC911\u2026"
+  - key: busy.checkingGitUrl
+    text: "git URL \uD655\uC778 \uC911\u2026"
+  - key: busy.removingTool
+    text: "Package Setup Tool \uC81C\uAC70 \uC911\u2026"
+  - key: busy.source.searching
+    text: "{0} \uAC80\uC0C9 \uC911"
+  - key: busy.source.listing
+    text: "{0} \uC124\uCE58 \uBAA9\uB85D \uD655\uC778 \uC911"
+  - key: busy.source.purchasesRequesting
+    text: "{0} \uAD6C\uB9E4 \uBAA9\uB85D \uC694\uCCAD \uC911"
+  - key: busy.source.purchases
+    text: "{0} \uAD6C\uB9E4 \uBAA9\uB85D {1}/{2}"
+  - key: busy.source.descriptions
+    text: "{0} \uC124\uBA85 {1}/{2}"
+  - key: busy.source.done
+    text: "{0} \uC644\uB8CC"
+  - key: busy.source.failed
+    text: "{0} \uC2E4\uD328"
+  - key: busy.check.list
+    text: "\uD328\uD0A4\uC9C0 \uBAA9\uB85D \uC870\uD68C \uC911"
+  - key: busy.check.git
+    text: "Git \uC5C5\uB370\uC774\uD2B8 \uD655\uC778 {0}/{1}"
+  - key: busy.check.assetStore
+    text: "Asset Store \uC5C5\uB370\uC774\uD2B8 \uD655\uC778 \uC911"
+  - key: busy.git.download
+    text: "\uC800\uC7A5\uC18C \uBC1B\uB294 \uC911"
+  - key: busy.git.listTree
+    text: "\uD30C\uC77C \uBAA9\uB85D \uD655\uC778 \uC911"
+  - key: busy.git.readManifest
+    text: "package.json \uC77D\uB294 \uC911"
+  - key: log.installStateFailed
+    text: "\uC124\uCE58 \uC0C1\uD0DC \uBC30\uC9C0\uB97C \uAC31\uC2E0\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4(\uD328\uD0A4\uC9C0 \uBAA9\uB85D \uC870\uD68C \uC2E4\uD328): {0}"
+  - key: ui.installBadge.installed
+    text: "\uC124\uCE58\uB428"
+  - key: ui.installBadge.installed.tooltip
+    text: "\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0 \uC124\uCE58\uB428: {0}"
+  - key: ui.installBadge.imported
+    text: "\uC784\uD3EC\uD2B8\uB428"
+  - key: ui.installBadge.imported.tooltip
+    text: "\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0 \uC784\uD3EC\uD2B8\uD55C \uAE30\uB85D\uC774 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: ui.installBadge.dependency
+    text: "\uC124\uCE58\uB428(\uC758\uC874\uC131)"
+  - key: ui.installBadge.dependency.tooltip
+    text: "\uB2E4\uB978 \uD328\uD0A4\uC9C0\uC758 \uC758\uC874\uC131\uC73C\uB85C \uC124\uCE58\uB428: {0}\n\uB2E4\uB978 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C\uB294 \uC9C1\uC811 \uC124\uCE58\uD574\uC57C \uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  - key: ui.installBadge.builtIn.tooltip
+    text: "\uC5D0\uB514\uD130\uC5D0 \uD3EC\uD568\uB41C \uD328\uD0A4\uC9C0(BuiltIn)\uB85C \uC124\uCE58\uB428: {0}"

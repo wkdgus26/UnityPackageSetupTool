@@ -1,0 +1,562 @@
+/* 도구 공통 색. 이 스타일시트를 붙인 최상위 요소(:root)에 두어 아래 요소가 상속받는다. */
+:root {
+    --package-setup-border-color: rgb(35, 35, 35);
+    --package-setup-warning-color: rgb(255, 196, 0);
+    --package-setup-error-color: rgb(255, 115, 102);
+}
+
+/* 프리셋 탭 줄: 넘치면 줄바꿈하고, 세 줄을 넘으면 세로로 스크롤한다. */
+.preset-bar-container {
+    flex-shrink: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--package-setup-border-color);
+}
+
+.preset-bar {
+    max-height: 66px;
+}
+
+.preset-bar__row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1px 2px;
+}
+
+.preset-tab,
+.preset-bar__add {
+    height: 18px;
+    margin: 2px 1px;
+}
+
+.preset-tab {
+    max-width: 50%;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 8px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: var(--unity-colors-button-border);
+    background-color: var(--unity-colors-button-background);
+}
+
+.preset-tab:hover {
+    background-color: var(--unity-colors-button-background-hover);
+}
+
+/* highlight-text 는 파란색이라 강조 배경 위에서 묻힌다. Unity 목록의 선택 항목처럼 흰 글자로 둔다. */
+.preset-tab--selected,
+.preset-tab--selected:hover {
+    background-color: var(--unity-colors-highlight-background);
+    color: rgb(255, 255, 255);
+}
+
+/* 이름 입력 중인 탭은 입력칸이 들어갈 폭을 탭 줄 폭 기준으로 확보한다. */
+.preset-tab--editing {
+    min-width: 25%;
+    padding: 0;
+}
+
+.preset-tab__label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.preset-tab__field {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.preset-bar__add {
+    padding: 0 6px;
+}
+
+/* 프리셋·패키지 툴바: 창이 좁아지면 버튼은 그대로 두고 검색창만 최소 폭까지 줄인다. */
+.main-toolbar > .unity-toolbar-button,
+.main-toolbar > .unity-toolbar-menu,
+.main-toolbar > .unity-toolbar-spacer {
+    flex-shrink: 0;
+}
+
+/* 버튼 사이는 기본 테마의 1px 좌우 테두리(이웃과 겹치도록 margin-left -1px) 대신 구분선(.main-toolbar__divider)으로 나눈다.
+   테두리는 버튼 배경에 붙어 있어 버튼과 선 사이를 띄울 수 없기 때문이다. 적용 버튼은 아래 규칙이 테두리를 다시 둔다. */
+.main-toolbar > .unity-toolbar-button,
+.main-toolbar > .unity-toolbar-menu {
+    margin-left: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+/* 아이콘만 있는 툴바 버튼(목록 갱신) */
+.main-toolbar__icon-button {
+    width: 24px;
+    padding: 0 4px;
+}
+
+/* 프리셋 적용: 평평한 툴바 버튼들 사이에서 주요 실행 버튼으로 보이게 강조색 배경·테두리를 둔다.
+   기본 테마의 툴바 버튼 규칙보다 우선하도록 툴바 클래스와 함께 지정하고, 상태 규칙(.unity-toolbar-button:hover:enabled, 특정성 0-3-0)보다
+   높도록 :hover·:active 에는 :enabled 를 붙인다.
+   상태 색은 고정값이다. 테마의 --unity-colors-highlight-background-hover(-lighter) 는 파랑이 아니라 흰색 6% 오버레이·회색이라 파란 배경이 사라진다(6000.6 실측).
+   오버는 두 테마의 강조색(다크 #2C5D87, 라이트 #3A72B0)보다 밝게, 누름은 둘보다 어둡게 둔다. */
+.main-toolbar > .main-toolbar__apply-button {
+    margin: 2px 2px;
+    padding: 0 10px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--unity-colors-highlight-background);
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+}
+
+.main-toolbar > .main-toolbar__apply-button:hover:enabled {
+    background-color: rgb(74, 134, 200);
+}
+
+.main-toolbar > .main-toolbar__apply-button:active:enabled {
+    background-color: rgb(36, 76, 110);
+}
+
+/* 툴바 버튼 사이 구분선. 양옆 2px 는 버튼과 선 사이 간격이다.
+   프리셋 툴바의 적용(왼쪽)과 프리셋 관리(오른쪽) 사이 구분선은 창이 좁아도 양옆 스페이서 최소 폭만큼 떨어진다. */
+.main-toolbar__divider {
+    flex-shrink: 0;
+    width: 2px;
+    margin: 3px 2px;
+    background-color: var(--package-setup-border-color);
+}
+
+.main-toolbar__search {
+    width: 30%;
+    flex-shrink: 1;
+    min-width: 80px;
+}
+
+/* 패키지 종류 탭 헤더 줄은 줄어들지 않게 한다. 6000.6 기본 테마에는 이 값이 있지만 6000.0.0f1 에는 없어,
+   목록이 길면 헤더 줄이 내용 높이에 비례해 22px → 6px 로 눌려 목록 위에 겹친다(6000.0.0f1 실측). */
+.package-type-tab-view .unity-tab-view__header-container {
+    flex-shrink: 0;
+}
+
+/* 패키지 탭: 항목이 적어도 목록 영역이 탭 내용 영역을 채우게 한다. */
+.package-tab {
+    flex-grow: 1;
+}
+
+.package-tab > .unity-tab__content-container {
+    flex-grow: 1;
+}
+
+.git-add-row {
+    flex-direction: row;
+    flex-shrink: 0;
+    margin: 2px 2px 0 2px;
+}
+
+.git-add-row__url {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/* 입력칸 바로 아래의 git URL 추가 결과. 후보 URL 안내처럼 여러 줄일 수 있어 줄바꿈한다. 위험도에 따라 빨강(추가 안 함)·노랑(확인 못 하고 추가) */
+.git-add-message {
+    flex-shrink: 0;
+    margin: 0 6px 2px 6px;
+    white-space: normal;
+}
+
+.git-add-message--error {
+    color: var(--package-setup-error-color);
+}
+
+.git-add-message--warning {
+    color: var(--package-setup-warning-color);
+}
+
+.package-list {
+    flex-grow: 1;
+}
+
+.package-list__empty {
+    padding: 4px 6px;
+    white-space: normal;
+    opacity: 0.6;
+}
+
+/* 구역 머리글: 행과 같은 한 줄 높이에 아래 구분선만 둔다. */
+.package-section__header {
+    height: 18px;
+    padding-left: 4px;
+    -unity-text-align: middle-left;
+    -unity-font-style: bold;
+    font-size: 11px;
+    opacity: 0.8;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(89, 89, 89);
+}
+
+/* 선택 구역의 행은 옅은 강조 배경으로 비선택 구역과 구분한다. */
+.package-section--selected .package-row {
+    background-color: rgba(58, 121, 187, 0.18);
+}
+
+.package-section--selected .package-row:hover {
+    background-color: var(--unity-colors-highlight-background-hover);
+}
+
+/* 패키지 행: 에디터 기본 한 줄 높이(EditorGUIUtility.singleLineHeight) */
+.package-row {
+    flex-direction: row;
+    align-items: center;
+    height: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.package-row:hover {
+    background-color: var(--unity-colors-highlight-background-hover);
+}
+
+.package-row__toggle {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.package-row__toggle > .unity-toggle__input {
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.package-row__toggle .unity-toggle__text {
+    flex-shrink: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 상세 보기 아이콘 버튼: 삭제 버튼과 같은 높이에 16px 아이콘이 들어가는 폭 */
+.package-row__details {
+    width: 20px;
+    height: 16px;
+    margin: 0 0 0 4px;
+    padding: 0 2px;
+}
+
+.package-row__delete {
+    height: 16px;
+    margin: 0 0 0 4px;
+    padding: 0 6px;
+}
+
+/* 메인 목록의 설치 상태 배지. 직접 설치·임포트됨은 확인 창의 설치됨 배지와 같은 초록, 의존성·에디터 포함 패키지는 회색 */
+.package-row__install-badge {
+    margin-left: 4px;
+    background-color: rgba(98, 170, 78, 0.35);
+}
+
+.package-row__install-badge--dependency {
+    background-color: rgba(128, 128, 128, 0.35);
+}
+
+/* 목록 갱신·확인처럼 오래 걸리는 작업 중에만 보이는 진행 줄(스피너 + 작업 문구 + 세부 진행). 프리셋 적용은 진행 오버레이가 보여준다. */
+.busy-row {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 2px 6px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--package-setup-border-color);
+}
+
+.busy-row__spinner {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.busy-row__label {
+    flex-grow: 1;
+    flex-shrink: 1;
+    white-space: normal;
+}
+
+/* 공용 폴더에서 읽지 못한 파일. 고칠 때까지 패키지 툴바 아래에 남는다. */
+.data-error {
+    flex-shrink: 0;
+    padding: 2px 6px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--package-setup-border-color);
+}
+
+.data-error > Label {
+    color: var(--package-setup-warning-color);
+    white-space: normal;
+}
+
+/* 패키지 목록 영역. 프리셋 적용 진행 오버레이가 이 영역 전체를 덮는다. */
+.package-area {
+    flex-grow: 1;
+}
+
+.apply-overlay-host {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.apply-overlay {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 카드 크기는 목록 영역에 비례한다: 폭 80%, 높이는 내용만큼(최대 80%). 넘치는 항목은 목록 안에서 스크롤한다. */
+.apply-overlay__card {
+    width: 80%;
+    max-height: 80%;
+    padding: 6px 8px;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgb(25, 25, 25);
+    background-color: rgb(56, 56, 56);
+}
+
+.apply-overlay__progress {
+    flex-shrink: 0;
+    white-space: normal;
+    -unity-font-style: bold;
+}
+
+/* 프리셋 적용 진행: 전체 진행 바 → 결과·상태별 개수 → 안내 → 항목 행(상태 배지, 결과 배지, 이름, 종류, 사유) */
+.apply-overlay__progress-bar {
+    flex-shrink: 0;
+    margin: 2px 0;
+}
+
+.apply-overlay__counts {
+    flex-shrink: 0;
+    color: rgb(180, 180, 180);
+}
+
+.apply-overlay__notices {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.apply-overlay__notices > Label {
+    color: var(--package-setup-warning-color);
+    white-space: normal;
+}
+
+.apply-overlay__items {
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-height: 0;
+    margin-top: 4px;
+}
+
+.apply-overlay__footer {
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 4px;
+}
+
+.apply-item {
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 18px;
+    padding: 1px 0;
+}
+
+/* 상태 배지 공통 모양(StatusBadge): 행 높이(18px) 안에 들어가는 작은 둥근 표시. 위치별 여백과 색은 아래 클래스가 정한다. */
+.status-badge {
+    flex-shrink: 0;
+    height: 14px;
+    padding: 0 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    -unity-text-align: middle-center;
+}
+
+.apply-item__badge {
+    margin: 1px 4px 0 0;
+    color: rgb(255, 255, 255);
+}
+
+.apply-item__badge--waiting {
+    background-color: rgba(128, 128, 128, 0.35);
+    color: rgb(200, 200, 200);
+}
+
+.apply-item__badge--in-progress {
+    background-color: rgba(58, 121, 187, 0.9);
+}
+
+.apply-item__badge--success {
+    background-color: rgba(70, 150, 70, 0.85);
+}
+
+.apply-item__badge--skipped {
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
+.apply-item__badge--failed {
+    background-color: rgba(200, 70, 60, 0.9);
+}
+
+.apply-item__badge--unverified {
+    background-color: rgba(200, 140, 30, 0.9);
+}
+
+.apply-item__name {
+    flex-shrink: 0;
+    max-width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.apply-item__type {
+    flex-shrink: 0;
+    margin-left: 6px;
+    color: rgb(150, 150, 150);
+}
+
+/* 사유는 길 수 있어(UPM 오류 원문) 줄바꿈한다. */
+.apply-item__detail {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 6px;
+    white-space: normal;
+    color: rgb(180, 180, 180);
+}
+
+/* 완료된 항목의 사유는 결과별 색으로 보여준다. */
+.apply-item__detail--success {
+    color: rgb(115, 217, 115);
+}
+
+.apply-item__detail--skipped {
+    color: rgb(179, 179, 179);
+}
+
+.apply-item__detail--failed {
+    color: var(--package-setup-error-color);
+}
+
+.apply-item__detail--unverified {
+    color: rgb(255, 179, 51);
+}
+
+/* 프리셋 적용 확인 창(ApplyConfirmWindow·ReinstallSelectWindow): 위 안내 → 경고 → 목록(남는 높이 전체) → 아래 요약·버튼 */
+.apply-dialog {
+    flex-grow: 1;
+    padding: 6px;
+}
+
+.apply-dialog__description {
+    flex-shrink: 0;
+    margin-bottom: 4px;
+    white-space: normal;
+}
+
+.apply-dialog__notices {
+    flex-shrink: 0;
+    margin-bottom: 4px;
+}
+
+.apply-dialog__notice {
+    color: var(--package-setup-warning-color);
+    white-space: normal;
+}
+
+.apply-dialog__toolbar {
+    display: none;
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-bottom: 4px;
+}
+
+.apply-dialog__sections {
+    flex-grow: 1;
+    border-width: 1px;
+    border-color: var(--package-setup-border-color);
+}
+
+.apply-dialog__section-header {
+    margin-top: 4px;
+}
+
+.apply-dialog__row-name {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -unity-text-align: middle-left;
+}
+
+/* 설치됨·임포트됨 배지(초록). 업데이트·고정됨은 아래 modifier 로 색을 바꾼다. */
+.apply-dialog__badge {
+    margin-left: 4px;
+    background-color: rgba(98, 170, 78, 0.35);
+}
+
+/* 업데이트 배지: 설치됨 배지(초록)와 구분되는 강조색. 고정됨 배지는 정보만 주므로 흐린 회색 */
+.apply-dialog__badge--update {
+    background-color: rgba(58, 121, 187, 0.6);
+}
+
+.apply-dialog__badge--pinned {
+    background-color: rgba(128, 128, 128, 0.35);
+}
+
+/* 주의가 필요한 배지(scoped registry 필요). 경고색(--package-setup-warning-color)을 흐리게 쓴다. */
+.apply-dialog__badge--warning {
+    background-color: rgba(255, 196, 0, 0.35);
+}
+
+.apply-dialog__footer {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.apply-dialog__summary {
+    flex-grow: 1;
+    flex-shrink: 1;
+    white-space: normal;
+}
+
+.apply-dialog__button {
+    min-width: 80px;
+}
+
+/* 확인 창(ConfirmDialogWindow): 문장 → 오른쪽 정렬 버튼. 창 높이를 이 내용 높이에 맞춘다. */
+.confirm-dialog {
+    padding: 12px;
+}
+
+.confirm-dialog__message {
+    margin-bottom: 12px;
+    white-space: normal;
+}
+
+.confirm-dialog__footer {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.confirm-dialog__button {
+    min-width: 80px;
+}

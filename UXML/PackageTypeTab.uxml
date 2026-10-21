@@ -1,0 +1,16 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <engine:Tab label="Tab" name="PackageTypeTab" class="package-tab">
+        <engine:VisualElement name="GitAddRow" class="git-add-row" style="display: none;">
+            <engine:TextField name="GitUrlField" class="git-add-row__url" />
+            <engine:Button name="GitAddButton" />
+        </engine:VisualElement>
+        <engine:Label name="GitAddMessage" class="git-add-message" style="display: none;" />
+        <engine:Label name="EmptyLabel" class="package-list__empty" style="display: none;" />
+        <engine:ScrollView name="PackageElementView" horizontal-scroller-visibility="Hidden" class="package-list">
+            <engine:Label name="SelectedHeader" class="package-section__header" />
+            <engine:VisualElement name="SelectedSection" class="package-section package-section--selected" />
+            <engine:Label name="UnselectedHeader" class="package-section__header" />
+            <engine:VisualElement name="UnselectedSection" class="package-section" />
+        </engine:ScrollView>
+    </engine:Tab>
+</engine:UXML>

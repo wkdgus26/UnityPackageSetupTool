@@ -1,0 +1,19 @@
+{
+  "name": "com.jangdol.package-setup-tool",
+  "version": "1.0.0",
+  "displayName": "Package Setup Tool",
+  "description": "Editor tool that keeps package lists (presets) of Unity Registry packages, Git packages and Asset Store \"My Assets\" purchases, and installs, downloads and imports them into a new project in one click.",
+  "unity": "6000.0",
+  "license": "MIT",
+  "keywords": [
+    "package",
+    "preset",
+    "setup",
+    "asset store",
+    "editor"
+  ],
+  "author": {
+    "name": "Jangdol",
+    "url": "https://github.com/wkdgus26"
+  }
+}

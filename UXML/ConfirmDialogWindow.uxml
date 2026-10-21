@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="../Style/package-setup-tool.uss" />
+    <engine:VisualElement name="DialogRoot" class="confirm-dialog">
+        <engine:Label name="MessageLabel" class="confirm-dialog__message" />
+        <engine:VisualElement name="Footer" class="confirm-dialog__footer">
+            <engine:Button name="ConfirmButton" class="confirm-dialog__button" />
+            <engine:Button name="AlternativeButton" class="confirm-dialog__button" />
+            <engine:Button name="CancelButton" class="confirm-dialog__button" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

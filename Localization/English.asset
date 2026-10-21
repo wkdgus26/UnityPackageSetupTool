@@ -1,0 +1,593 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73455d3dab2e7974599997d0161b42ac, type: 3}
+  m_Name: English
+  m_EditorClassIdentifier: PackageSetupTool.Editor::PackageSetupTool.LanguageData
+  language: 10
+  displayName: English
+  entries:
+  - key: ui.apply
+    text: Apply Preset
+  - key: ui.cancel
+    text: Stop
+  - key: ui.delete
+    text: Delete
+  - key: ui.language.tooltip
+    text: Tool language
+  - key: ui.newPreset.tooltip
+    text: New preset
+  - key: ui.gitUrl.placeholder
+    text: "https://github.com/\u2026/\u2026git or git+file:///\u2026"
+  - key: ui.gitUrl.add
+    text: Add
+  - key: ui.package.notInCatalog
+    text: '{0} (not in list)'
+  - key: ui.details.packageManager.tooltip
+    text: Show details in Package Manager
+  - key: ui.details.git.tooltip
+    text: Open repository in browser
+  - key: ui.section.selected
+    text: Selected {0}
+  - key: ui.section.unselected
+    text: Not selected {0}
+  - key: ui.empty.noSearchMatch
+    text: No items match the search.
+  - key: ui.empty.git
+    text: No items. Add a git URL in the field above or press the refresh button.
+  - key: ui.empty.default
+    text: No items. Press the refresh button.
+  - key: menu.rename
+    text: Rename
+  - key: menu.delete
+    text: Delete...
+  - key: dialog.cancel
+    text: Cancel
+  - key: dialog.deletePreset.title
+    text: Delete Preset
+  - key: dialog.deletePreset.message
+    text: 'Delete the preset ''{0}''?
+
+      (It will be moved to the trash.)'
+  - key: dialog.deletePreset.ok
+    text: Delete
+  - key: dialog.applyPreset.title
+    text: Apply Preset
+  - key: dialog.applyPreset.message
+    text: Apply {1} packages of the preset '{0}' to this project. Applying continues even if scripts recompile.
+  - key: dialog.applyPreset.ok
+    text: Apply
+  - key: message.playModeUnavailable
+    text: Refreshing the list, adding installed packages and applying presets are unavailable in Play Mode.
+  - key: message.presetCreated
+    text: Created the preset '{0}'.
+  - key: message.presetRenameFailed
+    text: 'Failed to rename the preset: {0}'
+  - key: message.presetRenamed
+    text: Renamed the preset from '{0}' to '{1}'.
+  - key: message.presetDeleted
+    text: Deleted the preset '{0}'.
+  - key: message.gitUrlRequired
+    text: Enter a git URL to add.
+  - key: message.gitUrlDuplicated
+    text: 'This URL is already in the list: {0}'
+  - key: message.packageRemoved
+    text: 'Removed from the list: {0}'
+  - key: log.applyResumed
+    text: 'Resuming the apply of ''{0}'': {1}'
+  - key: log.playModeBlockedByCollect
+    text: Cannot enter Play Mode while refreshing the list. Try again after it finishes.
+  - key: log.playModeBlockedByApply
+    text: Cannot enter Play Mode while applying a preset. Try again after it finishes.
+  - key: log.packageHeaderUnreadable
+    text: 'Skipped because the product info could not be read: {0} ({1})'
+  - key: log.packageHeaderEmpty
+    text: 'Skipped because the product info is empty: {0}'
+  - key: error.alreadyBusy
+    text: 'Another task is already in progress: {0}'
+  - key: error.playModeStart
+    text: Cannot start refreshing the list, adding installed packages or applying a preset in Play Mode.
+  - key: error.uxmlNotFound
+    text: 'UXML file not found: {0}'
+  - key: progress.collectInterrupted
+    text: Refreshing the list was interrupted by a script reload. Run it again.
+  - key: progress.collectFinished
+    text: Finished refreshing the list
+  - key: progress.applyStarted
+    text: Started applying '{0}'
+  - key: progress.applyFinished
+    text: "Finished applying '{0}': {1} packages \u2014 succeeded {2}, needs check {3}, skipped {4}, failed {5}"
+  - key: progress.applyCancelled
+    text: "Stopped applying '{0}': {1} packages \u2014 succeeded {2}, needs check {3}, skipped {4}, failed {5}"
+  - key: collect.timeout
+    text: '{0}: skipped because it did not finish within {1} min'
+  - key: collect.failed
+    text: '{0}: failed - {1}'
+  - key: collect.result
+    text: '{0}: collected {1} ({2} new)'
+  - key: collect.descriptionUnavailable
+    text: '{0}: descriptions were not collected - {1}'
+  - key: collect.descriptionFailed
+    text: '{0}: failed to get descriptions for {1} items - {2}'
+  - key: collect.assetStoreLoginRequired
+    text: Sign in to a Unity account to get the purchase list.
+  - key: apply.cancelled
+    text: Stopped
+  - key: upm.cancelledInFlight
+    text: "Stopped: the install request already sent may still be completed by Unity, so the package may be installed."
+  - key: apply.fallback
+    text: '[Fallback] {0}: {1}'
+  - key: outcome.success
+    text: Success
+  - key: outcome.skipped
+    text: Skipped
+  - key: outcome.failed
+    text: Failed
+  - key: outcome.unverified
+    text: Needs check
+  - key: common.joined
+    text: '{0} / {1}'
+  - key: bridge.missingMembers
+    text: 'Package Manager internal API not found in Unity {0}: {1}'
+  - key: details.gitUrlNotWeb
+    text: 'This address cannot be opened in a browser: {0}'
+  - key: step.upmInstall
+    text: UPM Install
+  - key: step.assetStoreDownload
+    text: Asset Store Download
+  - key: step.assetStoreImport
+    text: Asset Store Import
+  - key: upm.progress.checkInstalled
+    text: 'UPM Install: checking installed packages'
+  - key: upm.progress.installing
+    text: 'UPM Install ({0}/{1}): {2}'
+  - key: upm.progress.retrying
+    text: 'UPM Retry ({0}/{1}): {2}'
+  - key: upm.progress.verify
+    text: 'UPM Install: verifying the results'
+  - key: upm.listTimeout
+    text: UPM did not respond to the installed package query for {0} min.
+  - key: upm.listFailed
+    text: 'Failed to query installed packages: {0}'
+  - key: upm.alreadyInstalled
+    text: Already installed
+  - key: upm.installTimeout
+    text: UPM did not respond for {0} min.
+  - key: upm.installFailedNoMessage
+    text: The UPM install request failed (no error message).
+  - key: upm.verifyTimeout
+    text: UPM did not respond to the install result query for {0} min (installation may still be in progress).
+  - key: upm.verifyFailed
+    text: 'Failed to query the install results: {0}'
+  - key: upm.notInstalled
+    text: Not installed (not confirmed within {0} min).
+  - key: download.alreadyDownloaded
+    text: Already downloaded
+  - key: download.loginRequired
+    text: Sign in to a Unity account to download.
+  - key: download.cancelled
+    text: "Stopped (download cancelled)"
+  - key: download.localFileMissing
+    text: The download finished but the local file was not found.
+  - key: download.noProgress
+    text: No download progress for {0} s (check sign-in, terms acceptance, and network).
+  - key: download.progress
+    text: Downloading from the Asset Store ({0} left)
+  - key: download.failedWithState
+    text: Download failed ({0})
+  - key: import.reason.reloadWithoutRecord
+    text: the completion event was lost to a reload and there is no import record
+  - key: import.reason.reload
+    text: the completion event was lost to a reload
+  - key: import.reason.timeout
+    text: no import completion event for {0} min
+  - key: import.alreadyImported
+    text: Already imported
+  - key: import.noLocalFile
+    text: No local file (not downloaded).
+  - key: import.progress
+    text: 'Importing from the Asset Store {0}/{1}: {2}'
+  - key: import.progress.publicApi
+    text: 'Importing from the Asset Store {0}/{1}: {2} (public API import: if a signature prompt appears, click ''Import Anyway'' to continue)'
+  - key: import.unreadable
+    text: 'Cannot verify: failed to read the package file ({0}) ({1})'
+  - key: import.noAssetList
+    text: 'Cannot verify: no asset list was found in the package ({0})'
+  - key: import.allAssetsPresent
+    text: Found {0} package assets in the project ({1})
+  - key: import.noAssetsPresent
+    text: The package assets are not in the project (0/{0}) ({1})
+  - key: import.someAssetsPresent
+    text: Only some package assets were found ({0}/{1}) ({2})
+  - key: import.publicApiImported
+    text: Imported with the public API (AssetOrigin not recorded)
+  - key: import.cancelled
+    text: The import was cancelled.
+  - key: import.cancelledInFlight
+    text: "Stopped: the import already started may still be completed by Unity, so the assets may be imported."
+  - key: package.fileTruncated
+    text: The package file is truncated.
+  - key: package.tarHeaderUnreadable
+    text: Failed to read the tar header of the package.
+  - key: preset.duplicateName
+    text: 'A preset with the same name already exists: {0}'
+  - key: preset.nameRequired
+    text: Enter a preset name.
+  - key: preset.invalidNameChars
+    text: 'The preset name contains invalid characters: {0}'
+  - key: presetFile.empty
+    text: The file is empty.
+  - key: presetFile.invalidJson
+    text: 'Invalid JSON: {0}'
+  - key: presetFile.unknownType
+    text: 'Item {0}: unknown type {1}'
+  - key: presetFile.emptyId
+    text: 'Item {0}: id is empty.'
+  - key: presetFile.emptyDisplayName
+    text: 'Item {0} ({1}): displayName is empty.'
+  - key: presetFile.duplicateItem
+    text: 'The same item appears more than once: {0} {1}'
+  - key: ui.refresh.tooltip
+    text: 'Refresh the package list: adds and updates the whole Registry, Asset Store purchases and installed Git packages. Presets are not changed.'
+  - key: ui.registerInstalled
+    text: Add Installed
+  - key: ui.registerInstalled.tooltip
+    text: Find the packages installed in this project and choose which to add to the selected preset (add only). Packages that cannot be installed the same way in other projects (built-in modules, packages shipped with the Editor (source BuiltIn) and local packages) are excluded. Asset Store assets are listed only if they are purchases in the list and have been imported.
+  - key: log.playModeBlockedByRegister
+    text: Cannot enter Play Mode while adding installed packages. Try again after it finishes.
+  - key: progress.registerInterrupted
+    text: Adding installed packages was interrupted by a script reload. Run it again.
+  - key: progress.registerFinished
+    text: 'Finished adding installed packages: {1} added to ''{0}'''
+  - key: register.result
+    text: '{0}: {1} added, {2} already in the preset, {3} not selected, {4} excluded'
+  - key: register.assetStoreNoPurchases
+    text: 'MyAssets: there are no purchases in the list, so imports could not be checked. Refresh the list first.'
+  - key: register.assetStoreSessionOnly
+    text: 'MyAssets: this Unity version cannot read import records from earlier sessions, so only assets imported in this Editor session were checked.'
+  - key: menu.changeSharedFolder
+    text: "Change Folder\u2026"
+  - key: menu.openSharedFolder
+    text: Open Folder
+  - key: dialog.changeSharedFolder.title
+    text: Select Shared Folder
+  - key: dialog.copySharedData.title
+    text: Change Shared Folder
+  - key: dialog.copySharedData.message
+    text: 'The selected folder has no presets or package list.
+
+      Copy the current data to it?
+
+
+      Current: {0}
+
+      New: {1}'
+  - key: dialog.copySharedData.ok
+    text: Copy
+  - key: dialog.copySharedData.alt
+    text: Don't Copy
+  - key: message.sharedFolderChanged
+    text: 'Changed the shared folder: {0}'
+  - key: message.sharedFolderCopyFailed
+    text: 'Could not copy the data, so the shared folder was not changed: {0}'
+  - key: message.sharedFolderBusy
+    text: The shared folder cannot be changed while refreshing the list, adding installed packages or applying a preset.
+  - key: message.presetCreateFailed
+    text: 'Failed to create the preset: {0}'
+  - key: message.presetDeleteFailed
+    text: 'Failed to delete the preset: {0}'
+  - key: data.unreadableFile
+    text: 'Skipped an unreadable file: {0} - {1}'
+  - key: data.catalogUnreadable
+    text: 'The package list file cannot be read, so the list cannot be changed. Fix or delete the file: {0} - {1}'
+  - key: data.changedElsewhere
+    text: The preset '{0}' was deleted or renamed elsewhere.
+  - key: data.saveFailed
+    text: 'Failed to save: {0} - {1}'
+  - key: data.folderUnavailable
+    text: 'Cannot use the shared folder: {0} - {1}'
+  - key: preset.nameTakenByUnreadable
+    text: 'An unreadable file with the same name is in the shared folder: {0}'
+  - key: trash.unsupported
+    text: 'Moving files to the trash is not supported on this OS: {0}'
+  - key: trash.failed
+    text: 'Could not move the file to the trash: {0} ({1})'
+  - key: progress.registerSaveFailed
+    text: Could not save the installed packages to '{0}'.
+  - key: ui.sharedFolder
+    text: Shared Folder
+  - key: ui.sharedFolder.tooltip
+    text: 'Shared folder that stores presets and the package list. All projects on this PC use it.
+
+      {0}'
+  - key: dialog.applyPreset.summary
+    text: "New {0} \xB7 Already installed {1}"
+  - key: dialog.badge.installed
+    text: Installed
+  - key: dialog.badge.imported
+    text: Imported
+  - key: dialog.section.empty
+    text: None
+  - key: dialog.next
+    text: Next
+  - key: dialog.reinstall.title
+    text: Already Installed Packages
+  - key: dialog.reinstall.message
+    text: '{0} packages are already installed. Check the ones to install or import again.
+
+      Unchecked items are excluded from this apply (the preset does not change).'
+  - key: dialog.reinstall.warning.unityRegistry
+    text: 'UnityRegistry: Requesting again may change the package to the editor''s recommended version.'
+  - key: dialog.reinstall.warning.myAssets
+    text: 'MyAssets: Importing again overwrites asset files you changed in the project with the package contents.'
+  - key: dialog.reinstall.warning.git
+    text: 'Git: Requesting again updates the package to the latest commit of the repository.'
+  - key: dialog.reinstall.all
+    text: Reimport All
+  - key: dialog.reinstall.none
+    text: Exclude All
+  - key: dialog.reinstall.summary
+    text: "Reimport {0} \xB7 Exclude {1}"
+  - key: message.applyCancelled
+    text: Cancelled applying the preset '{0}'.
+  - key: progress.installCheckFailed
+    text: Could not check the install status of the preset '{0}', so applying did not start. {1}
+  - key: progress.installCheckInterrupted
+    text: Checking the install status was interrupted by a script reload. Apply again.
+  - key: check.listFailed
+    text: 'Failed to list packages: {0}'
+  - key: check.timeout
+    text: No response within {0} min.
+  - key: check.assetStoreUnavailable
+    text: Cannot check which MyAssets items are imported, so all are shown as new imports. {0}
+  - key: check.assetStoreSessionOnly
+    text: This Unity version cannot see assets imported in earlier sessions. Assets already imported are imported again even without the 'Imported' badge.
+  - key: log.playModeBlockedByInstallCheck
+    text: Entering Play Mode was cancelled while checking the install status.
+  - key: apply.excluded
+    text: Excluded by user
+  - key: upm.reinstalled
+    text: "Requested again \u2014 version {0} \u2192 {1}"
+  - key: upm.reinstalledSameVersion
+    text: "Requested again \u2014 version unchanged {0}"
+  - key: import.reimported
+    text: Imported again
+  - key: import.reimportUnverified
+    text: Could not confirm the import ran again (the asset was already imported, so records and files cannot tell). {0}
+  - key: dialog.badge.update
+    text: "Update {0} \u2192 {1}"
+  - key: dialog.badge.pinned
+    text: Pinned ({0})
+  - key: dialog.applyPreset.summaryWithUpdates
+    text: "New {0} \xB7 Already installed {1} (updates available {2})"
+  - key: dialog.reinstall.summaryWithUpdates
+    text: "Reimport {0} \xB7 Exclude {1} (updates available {2})"
+  - key: dialog.reinstall.updatesPreselected
+    text: Items with an update are pre-checked to reimport (update).
+  - key: check.update.assetStoreUnavailable
+    text: Cannot check MyAssets updates. {0}
+  - key: check.update.loginRequired
+    text: Not signed in to a Unity account, so MyAssets updates were not checked.
+  - key: check.update.assetStoreFailed
+    text: 'Failed to check MyAssets updates: {0}'
+  - key: check.update.gitFailed
+    text: 'Failed to check the Git update ({0}): {1}'
+  - key: check.update.timeoutSeconds
+    text: No response within {0} s.
+  - key: git.notFound
+    text: Cannot run git (error {0}). Check that git is installed and on PATH.
+  - key: git.exitCode
+    text: 'git exited with an error (code {0}): {1}'
+  - key: git.refNotFound
+    text: '''{0}'' was not found in the remote repository.'
+  - key: download.refreshed
+    text: "Downloaded the latest version {0} \u2192 {1}"
+  - key: check.update.registryOffline
+    text: 'Could not get the online package list, so the local cache was used (UnityRegistry updates may be missed): {0}'
+  - key: download.refreshNotUpdated
+    text: The download finished, but the local file did not change to the latest version.
+  - key: import.notLatest
+    text: Not imported because the latest version could not be downloaded (the old version is not imported over it).
+  - key: progress.gitUrlCheckInterrupted
+    text: Checking the git URL was interrupted by a script reload. Add it again.
+  - key: log.playModeBlockedByGitUrlCheck
+    text: Entering Play Mode was cancelled while checking a git URL.
+  - key: message.gitUrlInvalid
+    text: 'Did not add the git URL: {0}
+
+      {1}'
+  - key: message.gitUrlAddedWithName
+    text: 'Added the git URL and checked it in ''{0}'': {1} (package {2})'
+  - key: message.gitUrlAddedUnverified
+    text: 'Could not verify the git URL, but added it and checked it in ''{0}'': {1}
+
+      {2}'
+  - key: gitCheck.notGitUrl
+    text: UPM does not recognize this as a git URL. The repository address must end with .git or start with git+.
+  - key: gitCheck.repositoryNotFound
+    text: 'Repository not found (wrong address or no access): {0}'
+  - key: gitCheck.revisionNotFound
+    text: The revision '{0}' was not found in the repository.
+  - key: gitCheck.shortCommit
+    text: A short commit hash ('{0}') cannot be checked without installing.
+  - key: gitCheck.noManifest
+    text: The repository has no UPM package (package.json).
+  - key: gitCheck.manifestNotAtPath
+    text: 'There is no package.json in ''{0}''. URLs of the packages found in the repository:
+
+      {1}'
+  - key: gitCheck.candidatesWithMore
+    text: '{0}
+
+      and {1} more'
+  - key: gitCheck.invalidManifest
+    text: 'Cannot read package.json: {0}'
+  - key: gitCheck.manifestMissingFields
+    text: package.json has no name or version.
+  - key: applyProgress.title
+    text: Done {0} / {1} ({2}%)
+  - key: applyProgress.counts
+    text: "Success {0} \xB7 Skipped {1} \xB7 Failed {2} \xB7 Needs check {3}  |  Loading {4} \xB7 Waiting {5}"
+  - key: applyItem.state.waiting
+    text: Waiting
+  - key: applyItem.state.inProgress
+    text: Loading
+  - key: applyItem.state.done
+    text: Done
+  - key: applyItem.activity.installing
+    text: Installing
+  - key: applyItem.activity.retrying
+    text: Retrying
+  - key: applyItem.activity.verifying
+    text: Verifying the install
+  - key: applyItem.activity.downloading
+    text: Downloading
+  - key: applyItem.activity.importing
+    text: Importing
+  - key: applyItem.waiting.retry
+    text: Waiting to retry
+  - key: applyItem.waiting.step
+    text: Waiting for {0}
+  - key: applyItem.detail.step
+    text: '{0}: {1}'
+  - key: ui.applyOverlay.close
+    text: Close
+  - key: dialog.stopApply.title
+    text: "Stop Applying Preset"
+  - key: dialog.stopApply.message
+    text: "Stop applying the preset now?\n\nItems that have not started are skipped and downloads in progress are cancelled.\nInstalls and imports already sent to Unity, and the compilation they trigger, cannot be cancelled and may still finish (those items are marked 'Needs check')."
+  - key: dialog.stopApply.ok
+    text: "Stop"
+  - key: dialog.stopApply.cancel
+    text: "Continue"
+  - key: message.gitUrlAddedFromSubfolder
+    text: 'Added the git URL found at ''{0}'' (no package.json at the repository root) and checked it in ''{1}'': {2} (package {3})'
+  - key: register.excludedBuiltIn
+    text: 'UnityRegistry: Excluded {0} packages shipped with the Editor (built-in modules, source BuiltIn).'
+  - key: register.excludedLocal
+    text: 'UnityRegistry: Excluded {0} local packages that cannot be installed in other projects: {1}'
+  - key: progress.registerPresetLoadFailed
+    text: 'Could not add installed packages because the preset ''{0}'' cannot be read: {1}'
+  - key: dialog.register.title
+    text: Add Installed Packages
+  - key: dialog.register.message
+    text: Check the packages to add to the preset '{0}'. Packages already in the preset cannot be removed here.
+  - key: dialog.register.all
+    text: Select All
+  - key: dialog.register.none
+    text: Deselect All
+  - key: dialog.register.summary
+    text: "Selected {0} \xB7 Already in preset {1}"
+  - key: dialog.register.ok
+    text: Add
+  - key: dialog.badge.registered
+    text: In Preset
+  - key: dialog.badge.scopedRegistry
+    text: 'Registry: {0}'
+  - key: dialog.badge.scopedRegistry.tooltip
+    text: Installed from the scoped registry '{0}' ({1}). Applying the preset fails in projects whose manifest does not have this registry.
+  - key: message.registerCancelled
+    text: Cancelled adding installed packages to the preset '{0}'.
+  - key: dialog.removeTool.title
+    text: Remove Package Setup Tool
+  - key: dialog.removeTool.afterApply
+    text: 'Applying the preset has finished. Remove Package Setup Tool from this project?
+
+
+      The installed packages and the presets and package list in the shared folder are kept.'
+  - key: dialog.removeTool.message
+    text: 'Remove Package Setup Tool from this project?
+
+
+      The installed packages and the presets and package list in the shared folder are kept.'
+  - key: dialog.removeTool.ok
+    text: Remove
+  - key: dialog.removeTool.cancel
+    text: Keep
+  - key: dialog.removeTool.close
+    text: OK
+  - key: dialog.removeTool.failed
+    text: 'Could not remove Package Setup Tool.
+
+
+      {0}'
+  - key: removeTool.trashFailed
+    text: Could not move the folder '{0}' to the trash.
+  - key: removeTool.failed
+    text: 'Package Manager could not remove ''{0}'': {1}'
+  - key: log.removeToolStarted
+    text: 'Removing Package Setup Tool from this project: {0}'
+  - key: log.stateDeleteFailed
+    text: 'Could not delete the tool state folder ''{0}'': {1}'
+  - key: log.playModeBlockedByRemoveTool
+    text: Entering Play Mode was cancelled because Package Setup Tool is being removed.
+  - key: progress.removeToolInterrupted
+    text: Removing Package Setup Tool was interrupted by a script reload. If it is still installed, remove it again from the menu.
+  - key: menu.duplicate
+    text: "Duplicate"
+  - key: ui.preset.copyName
+    text: "{0} Copy"
+  - key: message.presetDuplicated
+    text: "Duplicated the preset '{0}' as '{1}'."
+  - key: message.presetDuplicateFailed
+    text: "Failed to duplicate the preset: {0}"
+  - key: busy.collecting
+    text: "Refreshing the list\u2026"
+  - key: busy.registering
+    text: "Checking installed packages\u2026"
+  - key: busy.checkingInstalled
+    text: "Checking install status\u2026"
+  - key: busy.checkingGitUrl
+    text: "Checking the git URL\u2026"
+  - key: busy.removingTool
+    text: "Removing Package Setup Tool\u2026"
+  - key: busy.source.searching
+    text: "{0} searching"
+  - key: busy.source.listing
+    text: "{0} reading installed packages"
+  - key: busy.source.purchasesRequesting
+    text: "{0} requesting purchases"
+  - key: busy.source.purchases
+    text: "{0} purchases {1}/{2}"
+  - key: busy.source.descriptions
+    text: "{0} descriptions {1}/{2}"
+  - key: busy.source.done
+    text: "{0} done"
+  - key: busy.source.failed
+    text: "{0} failed"
+  - key: busy.check.list
+    text: "reading the package list"
+  - key: busy.check.git
+    text: "Git updates {0}/{1}"
+  - key: busy.check.assetStore
+    text: "checking Asset Store updates"
+  - key: busy.git.download
+    text: "downloading the repository"
+  - key: busy.git.listTree
+    text: "listing files"
+  - key: busy.git.readManifest
+    text: "reading package.json"
+  - key: log.installStateFailed
+    text: "Could not update the install badges (failed to read the package list): {0}"
+  - key: ui.installBadge.installed
+    text: "Installed"
+  - key: ui.installBadge.installed.tooltip
+    text: "Installed in this project: {0}"
+  - key: ui.installBadge.imported
+    text: "Imported"
+  - key: ui.installBadge.imported.tooltip
+    text: "This asset has an import record in this project."
+  - key: ui.installBadge.dependency
+    text: "Installed (dependency)"
+  - key: ui.installBadge.dependency.tooltip
+    text: "Installed as a dependency of another package: {0}\nOther projects may need it installed directly."
+  - key: ui.installBadge.builtIn.tooltip
+    text: "Installed as a package included with the Editor (BuiltIn): {0}"

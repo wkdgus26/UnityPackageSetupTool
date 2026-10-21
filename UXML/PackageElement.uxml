@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <engine:VisualElement name="ElementRow" class="package-row">
+        <engine:Toggle name="ElementToggle" class="package-row__toggle" />
+        <engine:Label name="InstallBadge" class="status-badge package-row__install-badge" style="display: none;" />
+        <engine:Button name="DetailsButton" class="package-row__details" />
+        <engine:Button name="DeleteButton" class="package-row__delete" style="display: none;" />
+    </engine:VisualElement>
+</engine:UXML>

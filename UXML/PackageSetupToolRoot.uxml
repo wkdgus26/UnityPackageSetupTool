@@ -1,0 +1,32 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="../Style/package-setup-tool.uss" />
+    <engine:VisualElement name="RootContainer" style="flex-grow: 1; flex-direction: column; height: 100%; max-height: 100%;">
+        <engine:VisualElement name="PresetBarContainer" class="preset-bar-container" />
+        <editor:Toolbar name="PresetToolbar" class="main-toolbar">
+            <editor:ToolbarButton name="ApplyButton" class="main-toolbar__apply-button" />
+            <editor:ToolbarSpacer style="flex-grow: 1;" />
+            <engine:VisualElement class="main-toolbar__divider" />
+            <editor:ToolbarSpacer style="flex-grow: 1;" />
+            <engine:VisualElement class="main-toolbar__divider" />
+            <editor:ToolbarMenu name="SharedFolderMenu" />
+            <engine:VisualElement class="main-toolbar__divider" />
+            <editor:ToolbarMenu name="LanguageMenu" />
+        </editor:Toolbar>
+        <editor:Toolbar name="PackageToolbar" class="main-toolbar">
+            <editor:ToolbarButton name="RefreshButton" class="main-toolbar__icon-button" />
+            <engine:VisualElement class="main-toolbar__divider" />
+            <editor:ToolbarButton name="RegisterInstalledButton" />
+            <engine:VisualElement class="main-toolbar__divider" />
+            <editor:ToolbarSpacer style="flex-grow: 1;" />
+            <editor:ToolbarSearchField name="PackageSearchField" class="main-toolbar__search" />
+        </editor:Toolbar>
+        <engine:VisualElement name="BusyView" class="busy-row" style="display: none;">
+            <engine:Image name="BusySpinner" class="busy-row__spinner" />
+            <engine:Label name="BusyLabel" class="busy-row__label" />
+        </engine:VisualElement>
+        <engine:VisualElement name="DataErrorView" class="data-error" style="display: none;" />
+        <engine:VisualElement name="PackageArea" class="package-area">
+            <engine:TabView name="PackageTypeTabView" view-data-key="PackageTypeTabView" class="package-type-tab-view" style="flex-grow: 1;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
