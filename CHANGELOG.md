@@ -3,6 +3,11 @@
 All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package follows [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-10-22
+
+### Fixed
+- Checking a Git URL and checking Git packages for updates now pass each argument to `git` separately, as the Package Manager does. Before, a quote inside the URL or its `#revision` ended the argument and the rest was read as `git` options, so a crafted URL could run a command while it was being checked. Results for valid URLs are unchanged.
+
 ## [1.0.0] - 2026-10-22
 
 ### Added
@@ -21,4 +26,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Korean and English UI.
 - Installation as a UPM package from a Git URL or as a `.unitypackage`.
 
+[1.0.1]: https://github.com/wkdgus26/PackageSetupTool/releases/tag/v1.0.1
 [1.0.0]: https://github.com/wkdgus26/PackageSetupTool/releases/tag/v1.0.0

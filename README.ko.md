@@ -86,7 +86,7 @@ UI 언어는 에디터 언어(한국어·영어)를 따르고 툴바에서 바�
 
 ### Git URL
 
-- 버전을 고정하려면 태그나 커밋을 붙입니다: `https://github.com/wkdgus26/PackageSetupTool.git#v1.0.0`.
+- 버전을 고정하려면 태그나 커밋을 붙입니다: `https://github.com/wkdgus26/PackageSetupTool.git#v1.0.1`.
 - `Packages/manifest.json`에 직접 추가해도 됩니다.
 
   ```json

@@ -86,7 +86,7 @@ The UI follows the editor language (English or Korean) and can be switched on th
 
 ### Git URL
 
-- Pin a version with a tag or commit: `https://github.com/wkdgus26/PackageSetupTool.git#v1.0.0`.
+- Pin a version with a tag or commit: `https://github.com/wkdgus26/PackageSetupTool.git#v1.0.1`.
 - Or add it to `Packages/manifest.json`:
 
   ```json
