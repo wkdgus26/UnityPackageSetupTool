@@ -16,7 +16,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Per-item progress overlay while applying. **Stop** asks for confirmation and ends applying right away: downloads in progress are cancelled, and a package whose install or import Unity has already started is marked **Needs check** because Unity may still finish it.
 - A progress row below the package toolbar while refreshing the list, checking installed packages or install status, or checking a Git URL, with per-step details (for example Asset Store descriptions 120/220).
 - Removing the tool from the project after setup: asked when closing the progress overlay of a fully installed preset, or with **Package Setup > Remove Package Setup Tool**. A progress bar is shown while removing.
-- Dialogs (apply, reinstall and register selection, and confirmations) open centered on the Package Setup Tool window.
+- Dialogs (apply, reinstall and register selection, and confirmations) open centered on the Package Setup Tool window, or on the Unity main window when the tool window is closed.
 - Error and reason texts (progress overlay, Git URL messages, shared folder errors, dialog notices) can be selected and copied.
 - Korean and English UI.
 - Installation as a UPM package from a Git URL or as a `.unitypackage`.
+
+[1.0.0]: https://github.com/wkdgus26/PackageSetupTool/releases/tag/v1.0.0

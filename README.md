@@ -54,18 +54,21 @@ The UI follows the editor language (English or Korean) and can be switched on th
 
 - Checked packages move to **Selected**, unchecked ones go back. Search filters both sections.
 - Badges show the current project: **Installed**, **Imported**, **Installed (dependency)**.
-- **Add Installed** adds the packages already in the current project to the preset.
+- **Add Installed** adds the packages already in the current project to the preset. Packages that other projects cannot install the same way are left out: packages included with the editor, local packages (embedded, local folder or tarball) and packages installed only as a dependency.
 
 ## Add Git packages by URL
 
 ![Adding a Git URL: the tool checks the repository and finds the package path](Documentation~/images/git-url-en.gif)
 
-- The URL is checked before it is added (only the file tree is fetched). Supports `?path=` and `#branch`, `#tag` or `#commit`.
-- If `package.json` is not at the repository root, the tool finds it and adds `?path=` for you.
+- The URL is checked before it is added: only the file list and `package.json` are downloaded, not the whole repository. Supports `?path=` and `#branch`, `#tag` or `#commit`.
+- If `package.json` is not at the repository root, the tool finds it and adds `?path=` for you. If it finds several, you pick one from a list. A `?path=` you entered is not changed: if it has no `package.json`, the tool shows the paths it found instead.
+- A short commit hash cannot be checked before installing, so the URL is added with a warning. Use the full 40-character hash to have it checked.
+- Private repositories need saved credentials (Git Credential Manager or an SSH key), because the tool does not open a sign-in prompt. Without them the URL is added with a warning, and the Package Manager needs the same credentials to install it.
 
 ## Apply a preset
 
 - Before installing, the tool shows what is already installed and which packages have updates. You choose which installed ones to reinstall.
+- Presets keep packages, not versions. Unity Registry packages get the version the editor recommends, Git packages the `#branch`, `#tag` or `#commit` in the URL (the latest commit of the default branch if none), and Asset Store packages their latest version. Packages already in the project keep their version unless you reinstall them. To always install the same version of a Git package, add a tag or commit to its URL.
 - Packages are installed one at a time, so one failure does not block the rest. Applying continues after script recompiles and editor restarts.
 - **Stop** ends applying right away. Packages not started are skipped and downloads are cancelled, but an install or import Unity has already started may still finish.
 - When everything is installed, closing the progress view offers to remove the tool from the project (**Package Setup > Remove Package Setup Tool** does the same later).
@@ -73,6 +76,7 @@ The UI follows the editor language (English or Korean) and can be switched on th
 ## Requirements
 
 - Unity 6 (`6000.0` or newer). On older editors the tool does not compile and stays inactive.
+- Tested on Windows. macOS and Linux have not been tested. On Linux, deleting a preset is not supported (preset files are moved to the trash only on Windows and macOS); delete `Presets/<name>.json` in the shared folder instead.
 - [Git](https://git-scm.com/) on `PATH` for Git packages.
 - Asset Store features use internal Package Manager APIs (tested on 6000.3–6000.6) and require signing in. If an API is missing in your editor, the tool reports which features are unavailable.
 
@@ -98,7 +102,7 @@ The UI follows the editor language (English or Korean) and can be switched on th
 ### .unitypackage
 
 - Import with **Assets > Import Package > Custom Package...**. The tool goes into `Assets/PackageSetupTool` and can be moved to any folder under `Assets`.
-- To create one, select the `PackageSetupTool` folder and use **Assets > Export Package...** with all files included.
+- To create one, put this repository in a Unity project as `Assets/PackageSetupTool` (for example `git clone https://github.com/wkdgus26/PackageSetupTool.git Assets/PackageSetupTool`), then select the folder and use **Assets > Export Package...** with all files included.
 - To update, delete the folder and import the new version. To remove, use **Package Setup > Remove Package Setup Tool** (moves the folder to the trash) or delete the folder.
 
 Removing the tool keeps the installed packages and the shared folder data.
