@@ -26,5 +26,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Korean and English UI.
 - Installation as a UPM package from a Git URL or as a `.unitypackage`.
 
-[1.0.1]: https://github.com/wkdgus26/PackageSetupTool/releases/tag/v1.0.1
-[1.0.0]: https://github.com/wkdgus26/PackageSetupTool/releases/tag/v1.0.0
+[1.0.1]: https://github.com/wkdgus26/UnityPackageSetupTool/releases/tag/v1.0.1
+[1.0.0]: https://github.com/wkdgus26/UnityPackageSetupTool/releases/tag/v1.0.0

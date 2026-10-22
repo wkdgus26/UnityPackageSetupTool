@@ -28,7 +28,7 @@
 **Window > Package Manager**에서 **+** 버튼의 **Install package from git URL...** 메뉴를 누르고 아래 URL을 입력합니다. 다른 방법은 [설치 상세](#설치-상세)를 보세요.
 
 ```
-https://github.com/wkdgus26/PackageSetupTool.git
+https://github.com/wkdgus26/UnityPackageSetupTool.git
 ```
 
 **Package Setup > Package Setup Tool**을 엽니다.
@@ -86,13 +86,13 @@ UI 언어는 에디터 언어(한국어·영어)를 따르고 툴바에서 바�
 
 ### Git URL
 
-- 버전을 고정하려면 태그나 커밋을 붙입니다: `https://github.com/wkdgus26/PackageSetupTool.git#v1.0.1`.
+- 버전을 고정하려면 태그나 커밋을 붙입니다: `https://github.com/wkdgus26/UnityPackageSetupTool.git#v1.0.1`.
 - `Packages/manifest.json`에 직접 추가해도 됩니다.
 
   ```json
   {
     "dependencies": {
-      "com.jangdol.package-setup-tool": "https://github.com/wkdgus26/PackageSetupTool.git"
+      "com.jangdol.package-setup-tool": "https://github.com/wkdgus26/UnityPackageSetupTool.git"
     }
   }
   ```
@@ -102,7 +102,7 @@ UI 언어는 에디터 언어(한국어·영어)를 따르고 툴바에서 바�
 ### .unitypackage
 
 - **Assets > Import Package > Custom Package...** 메뉴로 임포트합니다. 도구는 `Assets/PackageSetupTool`에 들어가며 `Assets` 아래 어느 위치로 옮겨도 됩니다.
-- 직접 만들려면 이 저장소를 Unity 프로젝트의 `Assets/PackageSetupTool`에 넣은 뒤(예: `git clone https://github.com/wkdgus26/PackageSetupTool.git Assets/PackageSetupTool`) 그 폴더를 선택하고 **Assets > Export Package...** 메뉴에서 모든 파일을 포함해 내보냅니다.
+- 직접 만들려면 이 저장소를 Unity 프로젝트의 `Assets/PackageSetupTool`에 넣은 뒤(예: `git clone https://github.com/wkdgus26/UnityPackageSetupTool.git Assets/PackageSetupTool`) 그 폴더를 선택하고 **Assets > Export Package...** 메뉴에서 모든 파일을 포함해 내보냅니다.
 - 업데이트는 폴더를 지우고 새 버전을 임포트합니다. 제거는 **Package Setup > Remove Package Setup Tool**(폴더를 휴지통으로 보냄)을 쓰거나 폴더를 지웁니다.
 
 도구를 제거해도 설치한 패키지와 공용 폴더 데이터는 남습니다.

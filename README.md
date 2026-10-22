@@ -28,7 +28,7 @@ Stop installing the same packages one by one every time you create a Unity proje
 In **Window > Package Manager**, click **+ > Install package from git URL...** and enter the URL below. For other ways, see [Installation details](#installation-details).
 
 ```
-https://github.com/wkdgus26/PackageSetupTool.git
+https://github.com/wkdgus26/UnityPackageSetupTool.git
 ```
 
 Open **Package Setup > Package Setup Tool**.
@@ -86,13 +86,13 @@ The UI follows the editor language (English or Korean) and can be switched on th
 
 ### Git URL
 
-- Pin a version with a tag or commit: `https://github.com/wkdgus26/PackageSetupTool.git#v1.0.1`.
+- Pin a version with a tag or commit: `https://github.com/wkdgus26/UnityPackageSetupTool.git#v1.0.1`.
 - Or add it to `Packages/manifest.json`:
 
   ```json
   {
     "dependencies": {
-      "com.jangdol.package-setup-tool": "https://github.com/wkdgus26/PackageSetupTool.git"
+      "com.jangdol.package-setup-tool": "https://github.com/wkdgus26/UnityPackageSetupTool.git"
     }
   }
   ```
@@ -102,7 +102,7 @@ The UI follows the editor language (English or Korean) and can be switched on th
 ### .unitypackage
 
 - Import with **Assets > Import Package > Custom Package...**. The tool goes into `Assets/PackageSetupTool` and can be moved to any folder under `Assets`.
-- To create one, put this repository in a Unity project as `Assets/PackageSetupTool` (for example `git clone https://github.com/wkdgus26/PackageSetupTool.git Assets/PackageSetupTool`), then select the folder and use **Assets > Export Package...** with all files included.
+- To create one, put this repository in a Unity project as `Assets/PackageSetupTool` (for example `git clone https://github.com/wkdgus26/UnityPackageSetupTool.git Assets/PackageSetupTool`), then select the folder and use **Assets > Export Package...** with all files included.
 - To update, delete the folder and import the new version. To remove, use **Package Setup > Remove Package Setup Tool** (moves the folder to the trash) or delete the folder.
 
 Removing the tool keeps the installed packages and the shared folder data.
