@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PackageSetupTool
@@ -35,8 +36,18 @@ namespace PackageSetupTool
 
         public void Begin()
         {
-            string refs = _revision == HeadRevision ? HeadRevision : $"{BranchRefPrefix}{_revision} {TagRefPrefix}{_revision}";
-            _process = new GitProcess($"ls-remote \"{_repositoryUrl}\" {refs}", TimeoutSeconds);
+            // '-' 로 시작하는 URL 이 옵션으로 읽히지 않도록 "--" 뒤에 둔다.
+            var arguments = new List<string> { "ls-remote", "--", _repositoryUrl };
+            if (_revision == HeadRevision)
+            {
+                arguments.Add(HeadRevision);
+            }
+            else
+            {
+                arguments.Add($"{BranchRefPrefix}{_revision}");
+                arguments.Add($"{TagRefPrefix}{_revision}");
+            }
+            _process = new GitProcess(arguments, TimeoutSeconds);
             _process.Begin();
             // git 을 실행하지 못하면 시작하자마자 끝난다.
             if (_process.IsDone)

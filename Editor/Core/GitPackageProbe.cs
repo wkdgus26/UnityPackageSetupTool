@@ -57,12 +57,19 @@ namespace PackageSetupTool
             if (_url.Revision != null && GitRevision.IsFullCommitHash(_url.Revision))
             {
                 _treeish = "FETCH_HEAD";
-                Run(GitProbePhase.Init, $"init -q \"{_workDirectory}\"");
+                Run(GitProbePhase.Init, "init", "-q", _workDirectory);
                 return;
             }
             _treeish = "HEAD";
-            string branchOption = _url.Revision != null ? $"--branch \"{_url.Revision}\" " : string.Empty;
-            Run(GitProbePhase.Clone, $"clone -q --depth 1 --filter=blob:none --no-checkout {branchOption}\"{_url.RepositoryUrl}\" \"{_workDirectory}\"");
+            var arguments = new List<string> { "clone", "-q", "--depth", "1", "--filter=blob:none", "--no-checkout" };
+            if (_url.Revision != null)
+            {
+                arguments.Add("--branch");
+                arguments.Add(_url.Revision);
+            }
+            // '-' 로 시작하는 URL 이 옵션으로 읽히지 않도록 "--" 뒤에 둔다.
+            arguments.AddRange(new[] { "--", _url.RepositoryUrl, _workDirectory });
+            Run(GitProbePhase.Clone, arguments.ToArray());
         }
 
         public void Tick()
@@ -121,14 +128,14 @@ namespace PackageSetupTool
                 Complete(GitUrlCheckOutcome.Unverified, GetExitCodeText(), null);
                 return;
             }
-            Run(GitProbePhase.Fetch, $"-C \"{_workDirectory}\" fetch -q --depth 1 --filter=blob:none \"{_url.RepositoryUrl}\" {_url.Revision}");
+            Run(GitProbePhase.Fetch, "-C", _workDirectory, "fetch", "-q", "--depth", "1", "--filter=blob:none", "--", _url.RepositoryUrl, _url.Revision);
         }
 
         private void OnDownloadFinished()
         {
             if (_process.ExitCode == 0)
             {
-                Run(GitProbePhase.ListTree, $"-C \"{_workDirectory}\" ls-tree -r --name-only {_treeish}");
+                Run(GitProbePhase.ListTree, "-C", _workDirectory, "ls-tree", "-r", "--name-only", _treeish);
                 return;
             }
 
@@ -197,7 +204,8 @@ namespace PackageSetupTool
 
         private void ReadManifest()
         {
-            Run(GitProbePhase.ReadManifest, $"-C \"{_workDirectory}\" show \"{_treeish}:{_manifestPath}\"");
+            // show 는 "--" 뒤를 경로로 읽어 아무것도 출력하지 않고 성공하므로(git 2.45 실측) 붙이지 않는다. 인자가 HEAD·FETCH_HEAD 로 시작해 옵션으로 읽히지 않는다.
+            Run(GitProbePhase.ReadManifest, "-C", _workDirectory, "show", $"{_treeish}:{_manifestPath}");
         }
 
         private void OnReadManifestFinished()
@@ -254,7 +262,7 @@ namespace PackageSetupTool
             return new LocalizedText("git.exitCode", _process.ExitCode, new RawText(_process.ErrorText));
         }
 
-        private void Run(GitProbePhase phase, string arguments)
+        private void Run(GitProbePhase phase, params string[] arguments)
         {
             _phase = phase;
             _process = new GitProcess(arguments, TimeoutSeconds);

@@ -10,7 +10,7 @@ namespace PackageSetupTool
     // git 패키지를 설치하려면 UPM 도 git 이 필요하므로 같은 실행 파일(PATH 의 git)을 쓴다.
     public class GitProcess
     {
-        private readonly string _arguments;
+        private readonly IReadOnlyList<string> _arguments;
         private readonly int _timeoutSeconds;
         // 출력은 스레드 풀에서 들어오므로 잠그고 모은다.
         private readonly List<string> _outputLines = new();
@@ -18,7 +18,7 @@ namespace PackageSetupTool
         private Process _process;
         private DateTime _deadline;
 
-        public GitProcess(string arguments, int timeoutSeconds)
+        public GitProcess(IReadOnlyList<string> arguments, int timeoutSeconds)
         {
             _arguments = arguments;
             _timeoutSeconds = timeoutSeconds;
@@ -34,13 +34,18 @@ namespace PackageSetupTool
 
         public void Begin()
         {
-            var startInfo = new ProcessStartInfo("git", _arguments)
+            var startInfo = new ProcessStartInfo("git")
             {
                 UseShellExecute = false,
                 CreateNoWindow = true,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
             };
+            // 인자를 하나의 문자열로 이어 붙이면 값 안의 따옴표가 인자 경계를 깨고 git 옵션으로 읽힌다. UPM 처럼 인자마다 따로 넘긴다.
+            foreach (string argument in _arguments)
+            {
+                startInfo.ArgumentList.Add(argument);
+            }
             // 인증이 필요한 저장소에서 입력을 기다리며 멈추지 않게 한다. 터미널 프롬프트와 Git Credential Manager 의 로그인 창을 모두 끈다.
             startInfo.EnvironmentVariables["GIT_TERMINAL_PROMPT"] = "0";
             startInfo.EnvironmentVariables["GCM_INTERACTIVE"] = "never";
