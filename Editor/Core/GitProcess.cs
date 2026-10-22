@@ -41,7 +41,8 @@ namespace PackageSetupTool
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
             };
-            // 인자를 하나의 문자열로 이어 붙이면 값 안의 따옴표가 인자 경계를 깨고 git 옵션으로 읽힌다. UPM 처럼 인자마다 따로 넘긴다.
+            // 인자를 하나의 문자열로 이어 붙이면 값 안의 따옴표가 인자 경계를 깨고 git 옵션으로 읽힌다. UPM 처럼 인자마다 따로 넘긴다
+            // (UPM 은 따옴표가 든 리비전을 값 전체 그대로 git 에 넘겨 "invalid refspec" 으로 끝난다, 6000.0 실측).
             foreach (string argument in _arguments)
             {
                 startInfo.ArgumentList.Add(argument);
